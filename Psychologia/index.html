@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                font-family: 'Garamond';
+                background-color: #DDDDDD;
+                font-size: 12pt;
+                background-image: linear-gradient(red, yellow, green);
+            }
+
+            body {
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+            }
+
+            .sheet {
+                background-color: #FFFFFF;
+                border-radius: 10pt;
+                padding: 24pt;
+                box-shadow: 5px 5px 5px black;
+            }
+
+            .title {
+                font-size: 32pt;
+            }
+
+            .section-title {
+                font-size: 24pt;
+                margin-bottom: -8pt;
+            }
+
+            .sub-section-title {
+                font-size: 16pt;
+                margin-bottom: -8pt;
+            }
+
+            .line {
+                border: 1px solid #DDDDDD;
+            }
+
+            .w-70 {
+                width: 70%;
+            }
+
+            .w-30 {
+                width: 30%;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .p-1 {
+                padding: 2px;
+            }
+
+            .p-2 {
+                padding: 4px;
+            }
+
+            .p-3 {
+                padding: 8px;
+            }
+
+            .footer {
+                text-align: center;
+                padding-top: 20pt;
+                padding-bottom: 20pt;
+            }
+
+            .hint {
+                cursor: help;
+            }
+
+            .hint:hover {
+                color: red;
+                transition-duration: 0.1s;
+            }
+
+            .highlight {
+                background-color: #fff0cc;
+                border-radius: 5pt;
+            }
+
+            .quote {
+                background-color: #EFEFEF;
+                border-radius: 10px;
+                padding: 10pt;
+                text-align: center;
+                font-style: italic;
+                max-width: 50%;
+                margin: auto;
+                font-size: 14pt;
+
+                margin-top: 10pt;
+                margin-bottom: 10pt;
+
+                transition: background-color 0.3s, box-shadow 0.3s;
+            }
+
+            .quote:hover {
+                background-color: #fff0cc;
+                box-shadow: 5px 5px 10px black;
+            }
+
+            sup {
+                color: #0077ff;
+            }
+
+            p {
+                padding-left: 10pt;
+                padding-right: 10pt;
+            }
+        </style>
+
+        <title>EQ w szkolnicwie</title>
+    </head>
+    <body>
+        <main class="sheet">
+            <header>
+                <div class="flex">
+                    <div class="w-70 p-2">
+                        <h1 class="title">Znaczenie i rola inteligencji emocjonalnej w szkolnictwie artystycznym - perspektywa pedagoga i ucznia.</h1>
+                    </div>
+
+                    <div class="w-30 p-2">
+                        <h3>
+                        Przemysław Kojs <br/>
+                        Nr indeksu: 8586 <br/>
+                        Wydział Instrumentalny <br/>
+                        Klasa organów <br/>
+                        Studia 1. stopnia (lic.): III semestr <br/>
+                        Studium pedagogiczne: I semestr
+                        </h3>
+                    </div>             
+                </div>                   
+            </header>
+
+            <hr class="line">
+
+            <article>
+                <section>
+                    <h3 class="section-title" id="word-list">Spis treści</h3>
+
+                    <ol>
+                        <li><a href="#introduction" onclick="highlightElement('introduction')">Wprowadzenie</a></li>
+                        <li><a href="#emotional-intelligence" onclick="highlightElement('emotional-intelligence')">Inteligencja emocjonalna</a></li>
+                        <li>
+                            <a href="#questions" onclick="highlightElement('questions')">Pytania</a>
+                            
+                            <ul>
+                                <li><a href="#q-1" onclick="highlightElement('q-1')">Czy Pana zdaniem pedagog w szkole muzycznej powinien cechować się wysoką inteligencją emocjonalną? Dlaczego?</a></li>
+                                <li><a href="#q-2" onclick="highlightElement('q-2')">Które cechy uważa Pan za najistotniejsze?</a></li>
+                                <li><a href="#q-3" onclick="highlightElement('q-3')">W jaki sposób dzięki inteligencji emocjonalnej może kształtować/wpływać na swoich uczniów i ich edukację muzyczną?</a></li>
+                                <li><a href="#q-4" onclick="highlightElement('q-4')">W jaki sposób pedagog może rozwijać inteligencję emocjonalną u swojego ucznia kształcącego się w szkole muzycznej? Czy jest to potrzebne?</a></li>
+                                <li><a href="#q-5" onclick="highlightElement('q-5')">W jakich obszarach uczeń szkoły muzycznej powinien wykorzystywać kompetencje społeczno-emocjonalne?</a></li>
+                                <li><a href="#q-6" onclick="highlightElement('q-6')">Jakie zagrożenia niesie za sobą niski poziom kompetencji społeczno-emocjonalnych u ucznia i nauczyciela?</a></li>
+                                <li><a href="#q-7" onclick="highlightElement('q-7')">Czy nauczyciele wystarczająco wspierali uczniów w rozwijaniu i kształtowaniu sfery społeczno-emocjonalnej?</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#summary" onclick="highlightElement('summary')">Wprowadzenie</a></li>
+                        <li><a href="#sources" onclick="highlightElement('sources')">Źródła</a></li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="introduction">Wprowadzenie</h3>
+
+                    <p>
+                        Celem niniejszej pracy jest - jak można wywnioskować z tytułu - przedstawienie i omówienie znaczenia oraz roli inteligencji emocjonalnej w szkolnictwie artystycznym,
+                        z perspektywy pedagoga i ucznia. W zagadnieniu dot. pracy pojawiło się wiele pytań pomocnicznych:
+                        <ul>
+                            <li><i>Czy Pana zdaniem pedagog w szkole muzycznej powinien cechować się wysoką inteligencją emocjonalną? Dlaczego?</i></li>
+                            <li><i>Które cechy uważa Pan za najistotniejsze?</i></li>
+                            <li><i>W jaki sposób dzięki inteligencji emocjonalnej może kształtować/wpływać na swoich uczniów i ich edukację muzyczną?</i></li>
+                            <li><i>W jaki sposób pedagog może rozwijać inteligencję emocjonalną u swojego ucznia kształcącego się w szkole muzycznej? Czy jest to potrzebne?</i></li>
+                            <li><i>W jakich obszarach uczeń szkoły muzycznej powinien wykorzystywać kompetencje społeczno-emocjonalne?</i></li>
+                            <li><i>Jakie zagrożenia niesie za sobą niski poziom kompetencji społeczno-emocjonalnych u ucznia i nauczyciela?</i></li>
+                            <li><i>Czy nauczyciele wystarczająco wspierali uczniów w rozwijaniu i kształtowaniu sfery społeczno-emocjonalnej?</i></li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        Dodatkowo, obecne są również materiały, z których mieliśmy skorzystać. Je również pozwolę sobie wymienić oraz dodać do nich odwołania, w celu bardziej sprawnego
+                        cytowania.
+
+                        <ul>
+                            <li><sup>1</sup><i id="source-1">Znaczenie inteligencji emocjonalnej w pracy nauczyciela</i> - Paulina Grabowiec (2013) - Edukacja Humanistyczna nr 1 (28), 59-65</li>
+                            <li><sup>2</sup><i id="source-2">7 cech osób o wysokiej inteligencji emocjonalnej</i> - Minds of Hope, na podstawie badań T. Bradberry</li>
+                            <li><sup>3</sup><i id="source-3">Inteligencja emocjonalna - szczypta teorii i garść wskazówek dla rodziców</i> - Marta Matuszewska</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        Pracę została napisana z wykorzystaniem źródeł wymienionych powyżej, źródeł wymienionych w sekcji <a href="#sources" onclick="highlightElement('sources')"><i>Źródła</i></a> oraz doświadczeń własnych. Dodatkowo, w pracy
+                        można znaleźć wiele linków, które poprowadzą do odpowiednich stron, z których można dowiedzieć się dużo więcej na zadany temat.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="emotional-intelligence">Inteligencja emocjonalna</h3>
+
+                    <p>
+                        Dla porządku, przytoczę termin <b>inteligencji emocjonalnej</b>. Jest to pojęcie odnoszące się do <u>zdolność rozpoznawania przez nas naszych własnych uczuć i uczuć innych, do
+                        zdolności motywowania się i kierowania emocjami zarówno naszymi własnymi, jak i osób, z którymi łączą nas jakieś więzi.</u><sup><a href="#source-3" onclick="highlightElement('source-3')">[3]</a></sup>
+                    </p>
+
+                    <p>
+                        Inteligencja emocjonalna nie ma zatem praktycznie nic wspólnego ze <i>zwykłą</i> inteligencją - tą mierzoną ilorazem inteligencji
+                        <i>IQ</i><sup><a href="#source-4" onclick="highlightElement('source-4')">[4]</a></sup>. Jak również można wyczytać w artykule <sup><a href="#source-3" onclick="highlightElement('source-3')">[3]</a></sup> :
+
+                        <div class="quote">
+                            Te dwa różne rodzaje inteligencji - intelektualna i emocjonalna - są wyrazem
+                            aktywności różnych części mózgu. Intelekt opiera się wyłącznie na pracy kory mózgowej, stosunkowo
+                            niedawno powstałych górnych warstw komórek mózgowych. Ośrodki emocjonalne znajdują się
+                            głębiej, w dużo starszych obszarach podkorowych; inteligencja emocjonalna wynika z działania tych
+                            ośrodków, zharmonizowanego z działaniem ośrodków intelektualnych.
+                        </div>
+                    </p>
+
+                    <p>
+                        Można zatem śmiało stwierdzić, że inteligencja jednostki nie ma żadnego wpływu na jej zdolności wyrażania i odbierania emocji. Z tego wynika, że nie wszyscy
+                        mądrzy uczniowie czy nauczyciele są dobrymi ludźmi i odwrotnie - nie każdy <span title="głupi" class="hint">ograniczony poznawczo</span> uczeń będzie od razu
+                        złą osobą.
+                    </p>
+
+                    <p>
+                        W innej pracy <sup><a href="#source-2" onclick="highlightElement('source-2')">[2]</a></sup> można również wyczytać, że:
+
+                        <div class="quote">
+                            To połączenie umiejętności obserwacji i zarządzania emocjami własnymi oraz innych osób.
+                        </div>
+
+                        Tu się nasuwa zatem kolejny wniosek - jest to niezwykle ważna część naszej całej osobowości, dotyczy nie tylko nas, ale również ludzi, którymi się otaczamy.
+                        Warto również zaznaczyć, że ta sama praca określa 7 cech charakterystycznych dla osób z wysoką inteligencją emocjonalną, oraz wprowadza jej miernik -
+                        EQ <sup><a href="#source-5" onclick="highlightElement('source-5')">[5]</a></sup>.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="questions">Pytania</h3>
+                    
+                    <p>
+                        Po krótkim wprowadzeniu przejdę zatem do odpowiedzi na proponowane pytania pomocnicze. Dla przypomnienia, odpowiedzi udzielam na podstawie
+                        źródeł oraz doświadczeń własnych. Do każdego źródła będę się oczywiście odwoływał przy pomocy przypisów.
+                    </p>                   
+
+                    <section>
+                        <h3 class="sub-section-title" id="q-1">Czy Pana zdaniem pedagog w szkole muzycznej powinien cechować się wysoką inteligencją emocjonalną? Dlaczego?</h3>
+
+                        <p>
+                            Pytanie podzielone jest na 2 człony, pozwolę sobie zatem odpowiedzieć na nie <span title="Najpierw na 1., potem na 2." class="help">po kolei</span>,
+                            w dwóch kolejnych akapitach.
+                        </p>
+
+                        <p>
+                            Moim zdaniem, pedagog jak najbardziej powinien cechować się wysoką inteligencją emocjonalną, <u>w parze z inteligencją poznawczą</u>. Dotyczy to dowolnych
+                            pedagogów, czy to nauczycieli w przedszkolach, szkół prywatnych czy publicznych, oraz uczelni wyższych.
+                        </p>
+
+                        <p>
+                            Dzięki wysokiej inteligencji poznawczej, taki pedagog będzie osobą kompetentną w swej dziedzinie, a dzięki inteligencji emocjonalnej - zdolną do
+                            właściwej interpretacji sygnałów wyrażanych przez swoich podopiecznych. Dzięki temu z pewnością łatwiejsze będzie dostosowanie tempa przedstawiania
+                            materiału, czy ogólnie - pracy, do nastroju i poziomu zmęczenia uczniów. Generalnie, wszystkie <span class="hint">benefity</span> opisane w jednym
+                            z dostarczonych źródeł. <sup><a href="#source-1" onclick="highlightElement('source-1')">[1], strona 3.</a></sup>
+                        </p>
+                    </section>
+    
+                    <section>
+                        <h3 class="sub-section-title" id="q-2">Które cechy uważa Pan za najistotniejsze?</h3>
+
+                        <p>
+                            Tutaj zapewne należy odwołać się do 7 cech, wymienionych w jednym z dostarczonych źródeł <sup><a href="#source-2" onclick="highlightElement('source-2')">[2]</a></sup>.
+                            Pozwolę sobie przytoczyć je poniżej. Po definicje i więcej informacji odsyłam do artykułu.
+
+                            <div class="quote">
+                                <ol style="text-align: left; margin: 0;">
+                                    <li>Ciekawość i zainteresowanie innymi - (...)</li>
+                                    <li>Asertywność - (...)</li>
+                                    <li>Zaraźliwy optymizm - (...)</li>
+                                    <li>Umiejętność nazywania emocji - (...)</li>
+                                    <li>Nie są obrażalskie - (...)</li>
+                                    <li>Wybaczają i jednocześnie pamiętają - (...)</li>
+                                    <li>Potrafią powiedzieć szybko STOP swoim monologom wewnętrznym - (...)</li>
+                                </ol>                                
+                            </div>
+                        </p>
+
+                        <p>
+                            Według mnie, najistotniejsze cechy to <u>ciekawość i zaintersowanie innymi</u>, <u>asertywność</u> oraz <u>umiejętność nazywania emocji</u>.
+                            Dość ciekawa jest ta ostatnia, ponieważ jej posiadaczom z pewnością dużo łatwiej jest - dzięki znajomości emocji u siebie - domyślić się, co
+                            może czuć druga osoba. Należy również pamiętać, że zaangażowanie emocjonalne może być niebezpieczne - łatwo się przywiązać do kogoś, albo kogoś
+                            do siebie, co następnie negatywnie będzie wpływać na poziom autorytetu nauczyciela, w relacji pedagog &harr; uczeń.
+                        </p>
+
+                        <p>
+                            Myślę również, że można te cechy podsumować trzema prostszymi: <u>pewność siebie</u>, <u>spokój</u> oraz <u>empatia</u>. Połączenie tych cech wskazuje na wysokie EQ oraz 
+                            powinno doskonale pomóc w dowolnych interakcjach międzyludzkich - nie tylko pracy czy działalności pedagogicznej.
+                        </p>
+                    </section>
+    
+                    <section>
+                        <h3 class="sub-section-title" id="q-3">W jaki sposób dzięki inteligencji emocjonalnej może kształtować/wpływać na swoich uczniów i ich edukację muzyczną?</h3>
+
+                        <p>
+                            Wpływ ten jest ogromny. Jak można wyczytać w jednej z prac <sup><a href="#source-1" onclick="highlightElement('source-1')">[1], strona 6.</a></sup>:
+
+                            <div class="quote">
+                                Pierwszą osobą w życiu dziecka (oprócz rodziców ), która kształtuje umiejętności
+                                społeczne oraz emocjonalne wychowanka, jest nauczyciel. Odgrywa on kluczową rolę w
+                                rozwijaniu inteligencji emocjonalnej już od najmłodszych lat dziecka.
+                            </div>
+
+                            Zatem, nauczyciel jest trzecią osobą - po mamie i tacie - która bezpośrednio wpływa na wychowanie dziecka. Ciąży zatem na takiej osobie ogromna odpowiedzialność.
+                        </p>
+
+                        <p>
+                            Muzyka sama w sobie wiąże się z emocjami - ich przekazem, odzwierciedlaniem czy imitacją. Pedagog nie powinien zaburzać procesu chłonięcia przez ucznia wszystkich
+                            środków wyrazu płynących z muzyki. Jeżeli uczeń nie będzie czuł się dobrze na lekcji, z pewnością nie osiągnie swojego pełnego potencjału, zatem kluczowe jest
+                            dostosowanie nauczyciela do stanu emocjonalnego ucznia.
+                        </p>
+
+                        <p>
+                            Zatem, nauczyciel poprzez inteligencję emocjonalną może bezośrednio wpływać na samopoczucie i zachowanie uczniów, co później przełoży się na ich tempo rozwoju.
+                            Ja osobiście w swojej karierze trafiłem na bardzo wyrozumiałych pedagogów, którzy - nawet podczas dość surowej krytyki - potrafili wyzwolić we mnie uczucie,
+                            że ich uwagi są potrzebne, a owe niepowodzenie jest jedynie przejściowe. Uważam, że jest to cecha godna naśladowania oraz świadczy o ich wysokiej EQ.
+                        </p>
+                    </section>
+    
+                    <section>
+                        <h3 class="sub-section-title" id="q-4">W jaki sposób pedagog może rozwijać inteligencję emocjonalną u swojego ucznia kształcącego się w szkole muzycznej? Czy jest to potrzebne?</h3>
+
+                        <p>
+                            Na drugie pytanie częściowo odpowiedziałem wyżej, natomiast tutaj oczywiście dołożę trochę informacji. Odwołam się szeroko do jednego ze źródeł
+                            <sup><a href="#source-1" onclick="highlightElement('source-3')">[3]</a></sup>.
+                            
+                            <div class="quote">
+                                <ul style="text-align: left; margin: 0;">
+                                    <li>Pomóż dziecku w nazywaniu własnych stanów emocjonalnych</li>
+                                    <li>Mów o swoich uczuciach na co dzień</li>
+                                    <li>Nie zaprzeczaj uczuciom dziecka</li>
+                                    <li>Wplataj w zabawę naukę odczytywania i nazywania uczuć</li>
+                                    <li>Ucz dziecko wyrażania własnych potrzeb</li>
+                                    <li>Nagradzaj, doceniaj, podkreślaj postępy dziecka</li>
+                                </ul>
+                            </div>
+
+                            Nie wszystkie ww. elementy da się bezpośrednio odnieść do szkoły muzycznej, natomiast są to bardzo cenne uwagi.
+                        </p>
+
+                        <p>
+                            <b>Pomóż dziecku w nazywaniu własnych stanów emocjonalnych</b> - można to zrobić chociażby poprzez nazywanie emocji związanych z utworem, współbrzmieniem,
+                            dźwiękiem oraz odwoływanie się przy pomocy tych informacji do emocji w prawdziwym życiu. Często można również wykryć stan emocjonalny podopiecznego dzięki
+                            porównaniu odpowiedzi na ten sam fragment. Jeżeli na to samo współbrzmienie, w różne dni, uczeń odpowie innymi emocjami, to na tej podstawie już można coś
+                            wywnioskować.
+                        </p>
+
+                        <p>
+                            <b>Mów o swoich uczuciach na co dzień</b> - można to przekształcić na mówienie również o tym, jakie emocje wywołuje we mnie dane dzieło. Cel jest tożsamy
+                            z tym określonym w poprzednim punkcie.
+                        </p>
+
+                        <p>
+                            <b>Nie zaprzeczaj uczuciom dziecka</b> - niezwykle ważny punkt. Podczas niektórych lekcji, jeden z pedagogów często niejako <i>narzucał</i>, jakie emocje
+                            są związane z danym dziełem i nie pozwalał na podważenie tego stanowiska. Moim zdaniem jednak, bardzo kształcące jest danie uczniowi pewnego rodzaju pola
+                            do popisu. Pomoże to zarówno w pracy z utworem, jak i rozwoju EQ.
+                        </p>
+
+                        <p>
+                            <b>Wplataj w zabawę naukę odczytywania i nazywania uczuć</b> - poprzednie 3 punkty sprowadzają się do tego, więc tutaj nic nie dodam.
+                        </p>
+
+                        <p>
+                            <b>Ucz dziecko wyrażania własnych potrzeb</b> - może to być chociażby poprzez zachęcanie do mówienia czy w sali jest za zimno, za ciepło, czy jest
+                            wygodnie czy nie. Uczeń nie powinien się bać mówić o swoich potrzebach podczas lekcji, ponieważ wpływa to na jego samopoczucie i - jak opisałem
+                            wcześniej - na potencjał, który jest w stanie osiągnąć.
+                        </p>
+
+                        <p>
+                            <b>Nagradzaj, doceniaj, podkreślaj postępy dziecka</b> - kolejny niezwykle ważny punkt, szczególnie w dziedzinie pedagogiki muzyki. Tutaj efekty
+                            bardzo łatwo zmierzyć. Wpadki zdarzają się praktycznie zawsze, ale również praktycznie zawsze udaje się wypracować coś dobrego. Poprzez odpowiednie
+                            chwalenie oraz wyrażanie emocji podczas pracy z uczniem, taki podopieczny łatwo może nauczyć się interpretować emocje nauczyciela. To z kolei pomoże
+                            mu w takowej interpretacji w życiu codziennym.
+                        </p>
+
+                        <p>
+                            Podsumowując tę sekcję, podczas pracy z uczniem, jego inteligencję emocjonalną można rozwijać na szereg sposobów. Przy tym należy również być bardzo
+                            uważnym, ponieważ - poza rodzicami - jesteśmy bardzo wysoką inspiracją dla dziecka, a nasze działania mają bezpośredni wpływ na jego przyszłość.
+                        </p>
+                    </section>
+    
+                    <section>
+                        <h3 class="sub-section-title" id="q-5">W jakich obszarach uczeń szkoły muzycznej powinien wykorzystywać kompetencje społeczno-emocjonalne?</h3>
+
+                        <p>
+                            Krótką odpowiedzią jest: <span class="hint" title="SIKE!"><u>we wszystkich</u></span>. Tutaj jednak - według mnie - warto zwrócić uwagę na wymienione
+                            niżej aspekty. Nie są one aż tak widoczne na pierwszy rzut oka, natomiast w życiu praktycznie każdego artysty odgrywają szczególną rolę.
+                        </p>
+
+                        <p>
+                            <b>Interpretacja odbioru</b> - umiejętność wykorzystania analizy uczuć innej osoby pozwoli na samodzielną ocenę, czy występ został przyjęty pozytywnie,
+                            czy nauczycielowi podoba się to, co <span class="hint" title="nie-klawiszowcy, wybaczcie, ale mało mnie obchodzicie."><i>wychodzi spod palców</i></span>
+                            itp.
+                        </p>
+
+                        <p>
+                            <b>Dostosowanie się do odbiorcy</b> - szczególnie ważne u np. kompozytorów czy aranżerów. Umiejętność oceny, w jaki sposób słuchacze odbierają naszą
+                            twórczość jest kluczowa. Pozwala bowiem na pisanie utworów, które ludzie będą słuchali z większą przyjemnością i - co za tym idzie - przełoży się na
+                            wyższą frekwencję na koncertach, czy - idąc dalej - wyższą sprzedaż płyt itp.
+                        </p>
+
+                        <p>
+                            <b>Samodoskonalenie</b> - interpretacja uczuć powinna być również rozwinięta w samoanalizie. Artysta powinien pracować nad sobą tak, by nadmierne
+                            negatywne emocjie nie przekładały się na gorszą jakość wykonania.
+                        </p>
+
+                        <p>
+                            Obszarów zastosowania kompetencji społeczno-emocjonalnych jest oczywiście dużo więcej, postanowiłem się natomiast skupić jedynie na tych, które
+                            prawdopodobnie nie są aż tak trywialne jak inne.
+                        </p>
+                    </section>
+    
+                    <section>
+                        <h3 class="sub-section-title" id="q-6">Jakie zagrożenia niesie za sobą niski poziom kompetencji społeczno-emocjonalnych u ucznia i nauczyciela?</h3>
+
+                        <p>
+                            Na to pytanie zapewne również udało mi się częściowo odpowiedzieć już przy okazji poprzednich, dla porządku i uzupełnienia jednak, napiszę tutaj
+                            wszystko ponownie.
+                        </p>
+
+                        <p>
+                            <u>U ucznia</u> przyniesie to przede wszystkim trudności w pracy z pedagogami. Taka osoba nie będzie potrafiła odebrać sarkazmu czy faktycznej krytyki,
+                            nie będzie potrafiła rozmawiać z pedagogami i rówieśnikami, co z pewnością negatywnie wpłynie na samopoczucie.
+                        </p>
+
+                        <p>
+                            <u>U nauczyciela</u> sprawi to natomiast, że uczniowie na lekcjach będą się czuli po prostu źle, co - po raz kolejny to podkreślę - negatywnie wpłynie
+                            na osiągnięty potencjał. 
+                        </p>
+                    </section>
+    
+                    <section>
+                        <h3 class="sub-section-title" id="q-7">Czy nauczyciele wystarczająco wspierali uczniów w rozwijaniu i kształtowaniu sfery społeczno-emocjonalnej?</h3>
+                    
+                        <p>
+                            Odpowiadając na to pytanie - zgodnie z poleceniem - należy się odwołać do swoich doświadczeń wieloletniej edukacji muzycznej. Dla nadania kontekstu,
+                            moja edukacja muzyczna trwa już <u>18 lat</u>. Pierwsze 10 lat uczyłem się prywatnie, jedynie gry na fortepianie, następnie - w roku 2017 - zdałem
+                            egzamin wstępny do klasy organów w Państwowej Szkole Muzycznej II stopnia im. Ryszarda Bukowskiego we Wrocławiu, gdzie kształciłem się kolejne 6 lat.
+                            Po obronieniu dyplomu zostałem przyjęty do klasy organów <span class="hint" title="Akademia Muzyczna im. Karola Lipińskiego we Wrocławiu">AMKL</span>.
+                        </p>
+
+                        <p>
+                            Myślę, że można zatem śmiało powiedzieć, że mam bogate doświadczenie z pedagogami. Oczywiście, nazwisk tutaj nie będę wymieniał, podam jednak charakterystykę
+                            niektórych osób, o których - według mnie - warto powiedzieć przy okazji tej pracy.
+                        </p>
+
+                        <p>
+                            Wszyscy moi nauczyciele prywatni byli wyrozumiali i wspierający. Jest to dość zrozumiałe, zważywszy na to, że od atmosfery na zajęciach zależy ilość
+                            klientów oraz zarobek. Jak wspominałem w jednym z akapitów wyżej - miałem duże szczęście, ponieważ wszyscy ci pedagodzy potrafili doskonale do mnie
+                            przemówić, niezależnie od mojego czy ich humoru.
+                        </p>
+
+                        <p>
+                            Nieco gorzej sprawa miała się w placówkach publicznych - szkoła podstawowa czy gimnazjum. Tutaj nauczyciele często bagatelizowali potrzeby uczniów, przez
+                            co atmosfera na zajęciach była po prostu ciężko oraz - co niejako potwierdza moje uwagi dot. potencjału - trudniej się uczyło. Często po ocenach całej klasy
+                            można było dużo powiedzieć o atmosferze na zajęciach.
+                        </p>
+
+                        <p>
+                            Jeżeli chodzi natomiast o edukację muzyczną, to tutaj również mi się poszczęściło - nie trafiłem na żadnego pedagoga, który nie potrafiłby pracować z ludźmi
+                            czy nie był wyrozumiały. Myślę, że może mieć na to wpływ profesja - ludzie na co dzień związani z muzyką, czyli jednak sztuką w której te emocje odgrywają
+                            ogromną rolę, łatwiej potrafią o emocjach mówić, przekazywać je oraz odbierać.
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="summary">Podsumowanie</h3>
+
+                    <p>
+                        Przyszedł czas na zakończenie pracy. Krótko podsumowując, jako nauczyciel należy z pełną świadomością traktować emocje i rozmawiać o nich, ponieważ
+                        to pedagog jest kolejną osobą po rodzicach, która ma na rozwój największy wpływ.
+                    </p>
+
+                    <p>
+                        Uczeń z kolei powinien ten szczególny rodzaj inteligencji pielęgnować i rozwijać, ponieważ bardzo mu to pomoże w życiu codziennym, nie tylko w placówce
+                        edukacyjnej.
+                    </p>
+                </section>
+
+                <hr class="line">
+
+                <section>
+                    <h3 class="section-title" id="sources">Źródła</h3>
+
+                    <ul>
+                        <li><sup>4</sup><a href="https://pl.wikipedia.org/wiki/Iloraz_inteligencji" target="_blank" id="source-4">Wikipedia - Iloraz inteligencji</a></li>
+                        <li><sup>5</sup><a href="https://en.wikipedia.org/wiki/Emotional_intelligence" target="_blank" id="source-5">Wikipedia - Inteligencja emocjonalna</a></li>
+                    </ul>
+                </section>
+            </article>
+
+            <hr class="line">        
+            
+            <footer class="footer p-3">
+                <div>
+                    &copy; <i>Przemysław Kojs 17.12.2024</i>
+                </div>
+                <br/>
+                <div>
+                    Praca została napisana na potrzeby przedmiotu <i>Psychologia</i>, prowadzonego przez
+                    <a href="https://logopedia.uni.wroc.pl/wykladowcy/mgr-agnieszka-gulanowska-gruszewska/" target="_blank">p. mgr Agnieszkę Gulanowską-Gruszewską</a>.
+                    Termin oddania: <a href="https://www.kalbi.pl/18-grudnia" target="_blank"><u>18.12.2024 r.</u></a>
+                </div>
+            </footer>
+        </main>
+
+        <script>
+            function highlightElement(id) {
+                const element = document.getElementById(id);
+                const highlightClass = "highlight";
+
+                if (element) {
+                    element.parentElement.classList.add(highlightClass);
+
+                    setTimeout(() => {
+                        element.parentElement.classList.remove(highlightClass);
+                    }, 3000)
+                }
+            }
+        </script>
+    </body>
+</html>
