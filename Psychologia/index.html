@@ -5,7 +5,7 @@
             html {
                 font-family: 'Garamond';
                 background-color: #DDDDDD;
-                font-size: 12pt;
+                font-size: 16px;
                 background-image: linear-gradient(red, yellow, green);
             }
 
@@ -22,23 +22,23 @@
 
             .sheet {
                 background-color: #FFFFFF;
-                border-radius: 10pt;
-                padding: 24pt;
+                border-radius: 10px;
+                padding: 24px;
                 box-shadow: 5px 5px 5px black;
             }
 
             .title {
-                font-size: 32pt;
+                font-size: 40px;
             }
 
             .section-title {
-                font-size: 24pt;
-                margin-bottom: -8pt;
+                font-size: 30px;
+                margin-bottom: -8px;
             }
 
             .sub-section-title {
-                font-size: 16pt;
-                margin-bottom: -8pt;
+                font-size: 20px;
+                margin-bottom: -8px;
             }
 
             .line {
@@ -71,8 +71,8 @@
 
             .footer {
                 text-align: center;
-                padding-top: 20pt;
-                padding-bottom: 20pt;
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
 
             .hint {
@@ -86,21 +86,21 @@
 
             .highlight {
                 background-color: #fff0cc;
-                border-radius: 5pt;
+                border-radius: 5px;
             }
 
             .quote {
                 background-color: #EFEFEF;
                 border-radius: 10px;
-                padding: 10pt;
+                padding: 10px;
                 text-align: center;
                 font-style: italic;
                 max-width: 50%;
                 margin: auto;
-                font-size: 14pt;
+                font-size: 18px;
 
-                margin-top: 10pt;
-                margin-bottom: 10pt;
+                margin-top: 10px;
+                margin-bottom: 10px;
 
                 transition: background-color 0.3s, box-shadow 0.3s;
             }
@@ -115,12 +115,10 @@
             }
 
             p {
-                padding-left: 10pt;
-                padding-right: 10pt;
+                padding-left: 10px;
+                padding-right: 10px;
             }
         </style>
-
-        <title>EQ w szkolnicwie</title>
     </head>
     <body>
         <main class="sheet">
@@ -194,7 +192,7 @@
                         <ul>
                             <li><sup>1</sup><i id="source-1">Znaczenie inteligencji emocjonalnej w pracy nauczyciela</i> - Paulina Grabowiec (2013) - Edukacja Humanistyczna nr 1 (28), 59-65</li>
                             <li><sup>2</sup><i id="source-2">7 cech osób o wysokiej inteligencji emocjonalnej</i> - Minds of Hope, na podstawie badań T. Bradberry</li>
-                            <li><sup>3</sup><i id="source-3">Inteligencja emocjonalna - szczypta teorii i garść wskazówek dla rodziców</i> - Marta Matuszewska</li>
+                            <li><sup>3</sup><i id="source-3">Inteligencja emocjonalna - szczypxa teorii i garść wskazówek dla rodziców</i> - Marta Matuszewska</li>
                         </ul>
                     </p>
 
@@ -284,7 +282,7 @@
                                 <ol style="text-align: left; margin: 0;">
                                     <li>Ciekawość i zainteresowanie innymi - (...)</li>
                                     <li>Asertywność - (...)</li>
-                                    <li>Zaraźliwy optymizm - (...)</li>
+                                    <li>Zaraźliwy opxymizm - (...)</li>
                                     <li>Umiejętność nazywania emocji - (...)</li>
                                     <li>Nie są obrażalskie - (...)</li>
                                     <li>Wybaczają i jednocześnie pamiętają - (...)</li>
@@ -526,10 +524,10 @@
             function highlightElement(id) {
                 const element = document.getElementById(id);
                 const highlightClass = "highlight";
-
+    
                 if (element) {
                     element.parentElement.classList.add(highlightClass);
-
+    
                     setTimeout(() => {
                         element.parentElement.classList.remove(highlightClass);
                     }, 3000)
