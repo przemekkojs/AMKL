@@ -3,10 +3,108 @@
     <head>
         <title>AMKL Repo</title>
         <link rel="icon" type="image/x-icon" href="icon.png">
+
+        <style>
+            html {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    
+                background-image: linear-gradient(blue, white, cyan);  
+                min-height: 100%;          
+            }
+
+            body {
+                margin-left: 15%;
+                margin-right: 15%;                
+                min-height: 100vh;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            main {
+                flex: 1;
+            }
+
+            h1 {
+                margin-bottom: -5px;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+                cursor: pointer;
+            }
+
+            .sheet {
+                border-radius: 10px;
+                background-color: #eeeeee;
+                padding: 20px;
+                margin-top: 25px;
+                margin-bottom: 25px;  
+                box-shadow: 5px 5px 10px black;              
+            }
+
+            .footer {
+                text-align: center;
+                padding: 10px;
+                margin-top: 10px;
+            }
+
+            .link {
+                color: blue;
+            }
+        </style>
     </head>
 
-    <body>
-        <a href="Fakultety/index.html">Asystent wyborów fakultetów</a>
-        <a href="Psychologia/index.html">Znaczenie i rola inteligencji emocjonalnej w szkolnictwie artystycznym - perspektywa pedagoga i ucznia.</a>
+    <body class="sheet">
+        <header>
+            <h1>AMKL Repo 🎶</h1>
+        </header>
+
+        <main>
+            <article>
+                <section>
+                    <p>
+                        Serdecznie witam na stronie poświęconej rzeczom związanym z AMKL - Akademią Muzyczną im. Karola Lipińskiego we Wrocławiu. Znajduja się tutaj
+                        wszelkie narzędzia, teksty, prace i inne - mam nadzieje, że pomocne - rzeczy.
+                    </p>
+
+                    <p>
+                        Jeżeli jesteś ciekawy/ciekawa, jak te wszystkie rzeczy powstały, gorąco zachecam do odwiedzenia 
+                        👉<a href="https://github.com/przemekkojs" target="_blank" class="link">mojego GitHub-a</a> 👈!
+                    </p>
+
+                    <p>
+                        A w jaki sposób powstały te wszystkie twory? Są dumnie hostowane na GitHub pages! Co prawda, niesie to za sobą dość sporo ograniczeń - można
+                        udostępniać jedynie statyczne strony (<span style="color: #DC4B2F;">HTML</span>, <span style="color: #0368BB;">CSS</span>,
+                        <span style="color: #E9D458;">JS</span>... mówi Ci to coś? 😜), ale jak darmowe to nie ma co narzekać.
+                    </p>
+
+                    <p>
+                        Na dole strony znajdują się odnośniki do wszystkich opublikowanych narzędzi/prac itp. Kto wie? Może Tobie też się przydadzą 😉.
+                    </p>
+    
+                    <p>
+                        Życzę przyjemnego korzystania!
+                    </p>
+                </section>                
+                
+                <section>
+                    <h3>Narzędzia 🔨</h3>
+                    <p>
+                        <a href="Fakultety/index.html" target="_blank" class="link">Asystent wyboru fakultetów (v1.0)</a>              
+                    </p>     
+                </section>
+                
+                <section>
+                    <h3>Prace 📝</h3>
+
+                    <a href="Psychologia/index.html" target="_blank" class="link">Znaczenie i rola inteligencji emocjonalnej w szkolnictwie artystycznym - perspektywa pedagoga i ucznia.</a>
+                </section>
+            </article>
+        </main>
+
+        <footer class="footer">
+            &copy; Przemysław Kojs 2024
+        </footer>
     </body>
 </html>
