@@ -1,0 +1,186 @@
+===================================
+= FORMAT PLIKU DO TWORZENIA TESTU =
+===================================
+
+Dla informacji: komputer musi mieć pewnego rodzaju ustandaryzowaną reprezentację wiedzy, żeby ją przetwarzać,
+zatem pliki z testami również muszą mieć swój określony format.
+
+Oczywiście, mamy takie narzędzia jak quizlet czy inne, niemniej jednak - według mnie - warto mieć dodatkowo
+autorskie, dedykowane dla nauki studenckiej, z możliwością dostosowania pytań do własnych potrzeb.
+
+Niewykluczone, że powstanie osobne narzędzie do tworzenia tych plików - które będą mogły zostać wgrane (początkowo
+tylko przeze mnie, jeżeli kiedykolwiek jednak nastąpi zmiana platformy - z dość okrojonej GitHub Pages - również
+przez innych użytkowników).
+
+>>> Zatem, żeby móc stworzyć swój własny test, proszę stosować formaty wymienione poniżej. Każde z typów pytań posiada
+swój przykład, więc proponuję PO PROSTU KOPIOWAĆ I DOSTOSOWAĆ. Dla porządku jednak, wszystko zostało opisane.
+
+LINIJKA 1.:
+X. - numer pytania - np. 1., 2., 3., 01., 10.
+Niepoprawne będą inne wartości niż liczbowe!
+
+[] - typ pytania.
+    [J] - jednokrotnego wyboru
+    [W] - wieloktornego wyboru
+    [PF] - prawda/fałsz
+    [O] - otwarte (tutaj może być problem z prawidłowymi odpowiedziami...)
+    [L] - luki (do uzupełnienia)
+
+LINIJKI 2 - n .:
+Polecenie opisujemy jakbyśmy pisali zwykły tekst. Nie można jednak korzystać ze znaków specjalnych wymienionych wyżej.
+Formatowanie spacji i nowych linii zostanie zachowane w poleceniu, ale nadmierne wielokrotne linie będą skracane.
+
+W przypadku pytania [L], miejsce na wstawienie luk odbywa się przy pomocy ^a^ ^b^ ^c^ itd, gdzie każdy z symboli odpowiada
+kolejnej luce.
+
+<link> - tak można wstawić link do obrazka, który ma się załadować. Jeżeli nie ma być obrazka - zostawiamy pusty. Jeżeli
+potrzebujemy wiele obrazków, oddzielamy linki spacjami. Obrazki będą pokazywały się jeden pod drugim. Maksymalna liczba obrazków
+jest teoretycznie nieograniczona, w praktyce nie będę zezwalał na więcej niż 10.
+
+LINIJKI (n+1) - m (m > (n + 1)):
+(a) (b) (c) ... - odpowiedzi, TYLKO DLA PYTAŃ [J], [W], [PF], [L] Każdą z odpowiedzi dajemy od nowej linii.
+Odpowiedzi nie mogą być puste, treść od symbolu oddzielamy jedną spacją. Proszę nie szaleć z ilością odpowiedzi, zezwalam
+na maksymalnie 10 (wszystko ponad będzie usuwane). Muszą być zawsze minimum 2. Pytania typu [PF] akceptują tylko 2 odpowiedzi.
+Odpowiedzi piszemy w jednej linijce. Znaki nowej linii nie będą akceptowane.
+
+LINIJKA (m+1):
+{a} {b} {c} - poprawne odpowiedzi. Może nie być żadnej, mogą być wszystkie, muszą być związane z podanymi odpowiedziami oraz
+zgodne z typem pytania - dla pytań 1-krotnego wyboru również może być poprawnych kilka odpowiedzi.
+Dla pytania typu [O] - piszemy tylko {a}. Jeżeli ktoś poda kilka razy tą samą, to nie będzie to brane pod uwagę.
+Dla pytania typu [L] - nie dajemy nic.
+
+Zatem bardzo proszę o nie-psucie programu. Jeżeli będzie się stosowało zgodnie ze specyfikacją, to będzie działać bez zarzutu,
+jednak jeżeli będzie się go stosowało nie tak jak trzeba, to proszę nie oczekiwać że zadziała.
+
+=============
+= PRZYKŁADY =
+=============
+
+1. [J]
+Pytanie jednokrotnego wyboru bez obrazka
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+2. [J]
+Pytanie jednokrotnego wyboru z obrazkiem
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+3. [J]
+Pytanie jednokrotnego wyboru bez obrazka, z wieloma poprawnymi odpowiedziami
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}, {b}
+
+4. [J]
+Pytanie jednokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}, {b}
+
+5. [J]
+Pytanie jednokrotnego wyboru z wieloma obrazkami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}
+
+6. [J]
+Pytanie jednokrotnego wyboru z wieloma obrazkami, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}, {b}
+
+7. [W]
+Pytanie wielokrotnego wyboru bez obrazka
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+8. [W]
+Pytanie wielokrotnego wyboru z obrazkiem
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+9. [W]
+Pytanie wielokrotnego wyboru bez obrazka, z wieloma poprawnymi odpowiedziami
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}, {b}
+
+10. [W]
+Pytanie wielokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}, {b}
+
+11. [W]
+Pytanie wielokrotnego wyboru z wieloma obrazkami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}
+
+12. [W]
+Pytanie wielokrotnego wyboru z wieloma obrazkami, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}, {b}
+
+
+
+UWAGA!!!! Dalsze typy pytań będą bardziej okrojone - tworzymy je w podobny sposób, jak powyższe.
+
+
+13. [PF]
+Pytanie prawda/fałsz
+(a) Prawda
+(b) Fałsz
+{a}
+
+14. [L]
+Pytanie z lukami, luka 1: ^a^, luka 2 dalej: ^b^.
+(a) Tutaj poprawna odpowiedź
+(b) Tutaj poprawna odpowiedź
+
+15. [O]
+Pytanie otwarte. To jest polecenie.
+(a) Tutaj piszemy poprawną odpowiedź
+{a}

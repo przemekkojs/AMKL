@@ -1,0 +1,24 @@
+.question-number {
+    float: left;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.question-text {
+    font-style: italic;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+.link-image {
+    max-width: 256px;
+    max-height: 256px;
+    min-width: 128px;
+    min-height: 128px;
+}
