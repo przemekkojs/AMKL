@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testownik</title>
+
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body class="sheet">
+        <header>
+            <h1 onclick="location.reload()" style="cursor: pointer;">Testownik AMKL</h1>
+        </header>
+
+        <main>
+            <article>
+                <div id="description" style="display: block;">
+                    <p>
+                        Ta prosta aplikacja ma za zadanie wspomóc naukę. Możesz - posiadając odpowiedni plik - stworzyć quiz, który
+                    następnie rozwiążesz (albo i nie). Dzieląc się plikiem możesz natomiast udostępnić quiz innym!
+                    </p>
+
+                    <p>
+                        Jak stworzyć plik? Przykładowy możesz znaleźć tutaj: <a href="fileFormat.txt" target="_blank">link</a>. Znajdują
+                        się w nim przykładowe formaty pytań oraz instrukcja, jak stworzyć własny.
+                        <u>Nie jest wykluczone, że kiedyś powstanie narzędzie do tworzenia testów, ale na razie trzeba przeboleć.</u>
+                    </p>
+
+                    <p>
+                        Twoje pliki nie są w żaden sposób przesyłane na żaden serwer - wszystko odbywa się lokalnie, w przeglądarce.
+                        Nie musisz zatem martwić się o prywatność i inne tego typu sprawy.
+                    </p>
+
+                    <p>
+                        Aby wgrać swój quiz, wybierz plik.
+                    </p>
+
+                    <p>
+                        <input type="file" id="file-input" accept=".txt">
+
+                        <div id="errors" class="errors" style="margin-top: -15px;">
+                            
+                        </div>
+                    </p>
+                </div>
+
+                <div id="container" style="display: none;">
+
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            © Przemysław Kojs 2025
+        </footer>
+
+        <script src="./js/test.js" type="module"></script>
+    </body>
+</html>

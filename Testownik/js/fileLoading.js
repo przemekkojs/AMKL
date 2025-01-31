@@ -1,4 +1,7 @@
 export function readFile(file) {
+    if(file.type !== "text/plain" && !file.name.endsWith(".txt"))
+        throw new Error('Niewłaściwy typ pliku');
+
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
 

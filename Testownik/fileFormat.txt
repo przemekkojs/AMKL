@@ -81,7 +81,7 @@ Pytanie jednokrotnego wyboru bez obrazka, z wieloma poprawnymi odpowiedziami
 (b) Odpowiedź 2.
 (c) Odpowiedź 3.
 (d) Odpowiedź 4.
-{a}, {b}
+{a b}
 
 4. [J]
 Pytanie jednokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
@@ -90,7 +90,7 @@ Pytanie jednokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
 (b) Odpowiedź 2.
 (c) Odpowiedź 3.
 (d) Odpowiedź 4.
-{a}, {b}
+{a b}
 
 5. [J]
 Pytanie jednokrotnego wyboru z wieloma obrazkami
@@ -108,7 +108,7 @@ Pytanie jednokrotnego wyboru z wieloma obrazkami, z wieloma poprawnymi odpowiedz
 (b) Odpowiedź 2.
 (c) Odpowiedź 3.
 (d) Odpowiedź 4.
-{a}, {b}
+{a b}
 
 7. [W]
 Pytanie wielokrotnego wyboru bez obrazka
@@ -135,7 +135,7 @@ Pytanie wielokrotnego wyboru bez obrazka, z wieloma poprawnymi odpowiedziami
 (b) Odpowiedź 2.
 (c) Odpowiedź 3.
 (d) Odpowiedź 4.
-{a}, {b}
+{a b}
 
 10. [W]
 Pytanie wielokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
@@ -144,7 +144,7 @@ Pytanie wielokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
 (b) Odpowiedź 2.
 (c) Odpowiedź 3.
 (d) Odpowiedź 4.
-{a}, {b}
+{a b}
 
 11. [W]
 Pytanie wielokrotnego wyboru z wieloma obrazkami
@@ -162,7 +162,7 @@ Pytanie wielokrotnego wyboru z wieloma obrazkami, z wieloma poprawnymi odpowiedz
 (b) Odpowiedź 2.
 (c) Odpowiedź 3.
 (d) Odpowiedź 4.
-{a}, {b}
+{a b}
 
 
 
