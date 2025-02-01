@@ -22,7 +22,7 @@ Niepoprawne będą inne wartości niż liczbowe!
 [] - typ pytania.
     [J] - jednokrotnego wyboru
     [W] - wieloktornego wyboru
-    [PF] - prawda/fałsz
+    [P] - prawda/fałsz
     [O] - otwarte (tutaj może być problem z prawidłowymi odpowiedziami...)
     [L] - luki (do uzupełnienia)
 
@@ -38,9 +38,9 @@ potrzebujemy wiele obrazków, oddzielamy linki spacjami. Obrazki będą pokazywa
 jest teoretycznie nieograniczona, w praktyce nie będę zezwalał na więcej niż 10.
 
 LINIJKI (n+1) - m (m > (n + 1)):
-(a) (b) (c) ... - odpowiedzi, TYLKO DLA PYTAŃ [J], [W], [PF], [L] Każdą z odpowiedzi dajemy od nowej linii.
+(a) (b) (c) ... - odpowiedzi, TYLKO DLA PYTAŃ [J], [W], [P], [L] Każdą z odpowiedzi dajemy od nowej linii.
 Odpowiedzi nie mogą być puste, treść od symbolu oddzielamy jedną spacją. Proszę nie szaleć z ilością odpowiedzi, zezwalam
-na maksymalnie 10 (wszystko ponad będzie usuwane). Muszą być zawsze minimum 2. Pytania typu [PF] akceptują tylko 2 odpowiedzi.
+na maksymalnie 10 (wszystko ponad będzie usuwane). Muszą być zawsze minimum 2. Pytania typu [P] akceptują tylko 2 odpowiedzi.
 Odpowiedzi piszemy w jednej linijce. Znaki nowej linii nie będą akceptowane.
 
 LINIJKA (m+1):
@@ -169,7 +169,7 @@ Pytanie wielokrotnego wyboru z wieloma obrazkami, z wieloma poprawnymi odpowiedz
 UWAGA!!!! Dalsze typy pytań będą bardziej okrojone - tworzymy je w podobny sposób, jak powyższe.
 
 
-13. [PF]
+13. [P]
 Pytanie prawda/fałsz
 (a) Prawda
 (b) Fałsz
