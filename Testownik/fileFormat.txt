@@ -176,9 +176,11 @@ Pytanie prawda/fałsz
 {a}
 
 14. [L]
-Pytanie z lukami, luka 1: ^a^, luka 2 dalej: ^b^.
+Pytanie z lukami, luka 1: _, luka 2 dalej: _. W poprawnych odpowiedziach trzeba napisać wszystkie dostępne,
+odpowiedzi są mapowane zgodnie z kolejnością.
 (a) Tutaj poprawna odpowiedź
 (b) Tutaj poprawna odpowiedź
+{a b}
 
 15. [O]
 Pytanie otwarte. To jest polecenie.

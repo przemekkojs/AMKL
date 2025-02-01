@@ -66,5 +66,9 @@ a {
 }
 
 .text-input {
-    
+    width: 75px;
+}
+
+.long-text-input {
+    width: 100%;
 }
