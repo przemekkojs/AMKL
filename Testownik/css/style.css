@@ -72,3 +72,14 @@ a {
 .long-text-input {
     width: 100%;
 }
+
+.menu {
+    margin-top: -20px;
+    background-color: #DDDDDD;
+    padding: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px solid white;
+    margin-left: 5px;
+}

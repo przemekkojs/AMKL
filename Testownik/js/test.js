@@ -23,6 +23,7 @@ fileInput.addEventListener('change', function(event) {
                 });
 
                 container.appendChild(test.submitButton);
+                container.appendChild(test.reloadButton);
                 container.appendChild(test.resultBox);
             })
             .catch(function(error) {

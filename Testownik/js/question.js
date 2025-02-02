@@ -192,7 +192,7 @@ export class Question {
                 element.className = "link-image";
                 element.alt = 'obrazek';
 
-                this.linksContainer.appendChild(element);                
+                this.linksContainer.appendChild(element);                 
             }            
         });
 
@@ -296,6 +296,11 @@ export class Test {
         this.submitButton.type = 'button';
         this.submitButton.value = 'Sprawdź';
         this.submitButton.onclick = (() => this.check());
+
+        this.reloadButton = document.createElement('input');
+        this.reloadButton.type = 'button';
+        this.reloadButton.value = 'Wyjdź';
+        this.reloadButton.onclick = (() => location.reload());
 
         this.resultBox = document.createElement('div');
 

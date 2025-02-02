@@ -1,0 +1,124 @@
+1. [J]
+Pytanie jednokrotnego wyboru bez obrazka
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+2. [J]
+Pytanie jednokrotnego wyboru z obrazkiem
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+3. [J]
+Pytanie jednokrotnego wyboru bez obrazka, z wieloma poprawnymi odpowiedziami
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a b}
+
+4. [J]
+Pytanie jednokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a b}
+
+5. [J]
+Pytanie jednokrotnego wyboru z wieloma obrazkami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}
+
+6. [J]
+Pytanie jednokrotnego wyboru z wieloma obrazkami, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a b}
+
+7. [W]
+Pytanie wielokrotnego wyboru bez obrazka
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+8. [W]
+Pytanie wielokrotnego wyboru z obrazkiem
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{b}
+
+9. [W]
+Pytanie wielokrotnego wyboru bez obrazka, z wieloma poprawnymi odpowiedziami
+<>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a b}
+
+10. [W]
+Pytanie wielokrotnego wyboru z obrazkiem, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a b}
+
+11. [W]
+Pytanie wielokrotnego wyboru z wieloma obrazkami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a}
+
+12. [W]
+Pytanie wielokrotnego wyboru z wieloma obrazkami, z wieloma poprawnymi odpowiedziami
+<https://example.com/img.png https://example.com/img2.png https://example.com/img3.png>
+(a) Odpowiedź 1.
+(b) Odpowiedź 2.
+(c) Odpowiedź 3.
+(d) Odpowiedź 4.
+{a b}
+
+13. [P]
+Pytanie prawda/fałsz
+(a) Prawda
+(b) Fałsz
+{a}
+
+14. [L]
+Pytanie z lukami, luka 1: _, luka 2 dalej: _.
+(a) Tutaj poprawna odpowiedź
+(b) Tutaj poprawna odpowiedź
+{a b}
+
+15. [O]
+Pytanie otwarte. To jest polecenie.
+(a) Tutaj piszemy poprawną odpowiedź
+{a}
