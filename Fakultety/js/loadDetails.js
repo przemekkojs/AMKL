@@ -1,13 +1,6 @@
 // This script displays details of current course
-function getCookie(name) {
-    let value = "; " + document.cookie;
-    let parts = value.split("; " + name + "=");
-    if (parts.length === 2) {
-        return parts.pop().split(";").shift();
-    }
-}
 
-let cookieRow = getCookie("row");
+const cookieRow = localStorage.getItem("row");
 let content = document.getElementById('content').innerHTML;
 
 if (cookieRow) {

@@ -9,7 +9,7 @@ header.innerHTML = `
                 <li class="menu-item">
                     Plik
                     <ol class="submenu">
-                        <a href="loadDb.html"><li>Załaduj bazę</li></a>
+                        <a href="loadDb.html"><li>Załaduj listę</li></a>
                     </ol>
                 </li>
                 <li class="menu-item">

@@ -209,7 +209,15 @@ async function readAllRows() {
     const result = [];
 
     try {
-        const res = await fetch('js/resources/tab.tsv');
+        const filename = localStorage.getItem('filename');
+
+        if (!filename || filename === "") {
+            const currentPath = window.location.pathname;
+            const newPath = currentPath.replace("index.html", "loadDb.html");
+            window.location.replace(newPath);
+        }
+
+        const res = await fetch(`js/resources/${filename}`);
         const text = await res.text();
 
         const lines = text.split(/\r\n|\n/);
@@ -236,7 +244,7 @@ function createTmp(query) {
     const params = new URLSearchParams(query);
     const parsed = Object.fromEntries(params.entries());
 
-    document.cookie = "row=" + encodeURIComponent(JSON.stringify(parsed)) + "; path=/; max-age:60";
+    localStorage.setItem('row', encodeURIComponent(JSON.stringify(parsed)));
 }
 
 function filterContains(list, column, value) {
@@ -344,20 +352,23 @@ function createTable(rows) {
 }
 
 function populateForm(rows) {
-    let facultyDropdownOptions = getDistinctColumnValues(rows, 'Faculty');
-    let facultyNameDropdownOptions = getDistinctColumnValues(rows, 'Faculty Name');
-    let suggestedLearningStageDropdownOptions = getDistinctColumnValues(rows, 'Suggested Learning Stage');
-    let weekdayDropdownOptions = getDistinctColumnValues(rows, 'Weekday');
+    const facultyDropdownOptions = getDistinctColumnValues(rows, 'Faculty');
+    const facultyNameDropdownOptions = getDistinctColumnValues(rows, 'Faculty Name');
+    const suggestedLearningStageDropdownOptions = getDistinctColumnValues(rows, 'Suggested Learning Stage');
+    const weekdayDropdownOptions = getDistinctColumnValues(rows, 'Weekday');
+    const semesterDropdownValues = getDistinctColumnValues(rows, 'Semester');
 
     const facultyDropdown = document.getElementById('Faculty');
     const facultyNameDropdown = document.getElementById('Faculty Name');
     const suggestedLearningStageDropdown = document.getElementById('Suggested Learning Stage');
     const weekdayDropdown = document.getElementById('Weekday');
+    const semesterDropdown = document.getElementById('Semester');
 
     facultyDropdown.innerHTML = '<option value=""></option>';
     facultyNameDropdown.innerHTML = '<option value=""></option>';
     suggestedLearningStageDropdown.innerHTML = '<option value=""></option>';
     weekdayDropdown.innerHTML = '<option value=""></option>';
+    semesterDropdown.innerHTML = '<option value=""></option>';
 
     facultyDropdownOptions.forEach(option => {
         if (option !== "") {
@@ -394,13 +405,19 @@ function populateForm(rows) {
             weekdayDropdown.append(opt);
         }        
     });
+
+    semesterDropdownValues.forEach(option => {
+        if (option !== "") {
+            let opt = document.createElement('option');
+            opt.value = option;
+            opt.textContent = option;
+            semesterDropdown.append(opt);
+        }        
+    });
 }
 
 function clearFilters() {
-    readAllRows().then(rows => {
-        createTable(rows);
-        populateForm(rows);
-    });
+    window.location.reload();
 }
 
 function filter() {
@@ -415,8 +432,8 @@ function filter() {
             }            
         });
         
-        let startHour = document.getElementById('Start Hour').value;
-        let endHour = document.getElementById('End Hour').value;
+        const startHour = document.getElementById('Start Hour').value;
+        const endHour = document.getElementById('End Hour').value;
 
         if (startHour && startHour.trim() !== "") {
             filteredList = filterGreaterEqualThan(filteredList, 'Start Hour', startHour);
@@ -426,9 +443,9 @@ function filter() {
             filteredList = filterLowerEqualThan(filteredList, 'End Hour', endHour);
         }
 
-        ['ECTS Winter', 'ECTS Summer', 'ECTS Combined', 'Hours Winter', 'Hours Summer', 'Suggested Learning Stage', 'Faculty', 'Faculty Name', 'Room', 'Weekday']
+        ['ECTS Winter', 'ECTS Summer', 'ECTS Combined', 'Hours Winter', 'Hours Summer', 'Suggested Learning Stage', 'Faculty', 'Faculty Name', 'Room', 'Weekday', 'Semester']
             .forEach(item => {
-                let value = document.getElementById(item).value;
+                const value = document.getElementById(item).value;
 
                 if (value && value.trim() !== "") {  
                     filteredList = filterEqual(filteredList, item, value);
@@ -440,5 +457,8 @@ function filter() {
 }
 
 window.onload = function() {
-    clearFilters();
+    readAllRows().then(rows => {
+        createTable(rows);
+        populateForm(rows);
+    });
 }

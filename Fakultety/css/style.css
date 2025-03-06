@@ -212,3 +212,13 @@ button:hover {
     margin: 0 auto;
     display: inline-block;
 }
+
+.files-list {
+    text-align: left;
+    margin-top: -20px;
+}
+
+.files-list-element {
+    text-decoration: underline;
+    cursor: pointer;
+}
