@@ -1,7 +1,7 @@
-// This script is a main logic of the program
+// This script contains the main logic of the program
 
 class row {
-    constructor(course_name, suggested_learning_stage, teacher, place_limit, course_type, test_type, hours_winter, hours_summer, ects_winter, ects_summer, ects_combined, faculty, faculty_name, weekday, start_hour, end_hour, room, additional_pass_info, additional_info) {
+    constructor(course_name, suggested_learning_stage, teacher, place_limit, course_type, test_type, hours_winter, hours_summer, ects_winter, ects_summer, ects_combined, faculty, faculty_name, weekday, start_hour, end_hour, room, additional_pass_info, additional_info, semester="") {
         this.attributes = {
             'Course Name': course_name.trim(),
             'Suggested Learning Stage': suggested_learning_stage.trim(),
@@ -21,7 +21,8 @@ class row {
             'End Hour': end_hour.trim(),
             'Room': room.trim(),
             'Additional Pass Info': additional_pass_info.trim(),
-            'Additional Info': additional_info.trim()
+            'Additional Info': additional_info.trim(),
+            'Semester' : semester.trim()
         }
 
         this.correctAttributes()
@@ -29,16 +30,10 @@ class row {
 
     correctAttributes() {
         if (this.attributes['Start Hour'].length > 5)
-            this.attributes['Start Hour'] = this.attributes['Start Hour'].slice(-5, -1)
+            this.attributes['Start Hour'] = "-";
 
         if (this.attributes['End Hour'].length > 5)
-            this.attributes['End Hour'] = this.attributes['End Hour'].slice(-5, -1)
-
-        while (this.attributes['Start Hour'].length < 5)
-            this.attributes['Start Hour'] = "0" + this.attributes['Start Hour']
-
-        while (this.attributes['End Hour'].length < 5)
-            this.attributes['End Hour'] = "0" + this.attributes['End Hour']
+            this.attributes['End Hour'] = "-";
     }
 
     listAttributes() {
@@ -55,6 +50,53 @@ class row {
 }
 
 function readOneRow(content) {
+    try {
+        return readOneRowNew(content);
+    }
+    catch (err) {
+        try {
+            return readOneRowOld(content);
+        }
+        catch (err) {
+            console.error(err);
+        }
+    }
+}
+
+function readOneRowNew(content) {
+    const splittedContent = content.split('\t');
+    const contentLength = splittedContent.length;
+
+    if (contentLength < 19 || contentLength > 20)
+        throw new Error(`Error parsing row ${content}`);
+
+    let semester = contentLength === 19 ? "" : splittedContent[19];
+
+    return new row(
+        splittedContent[0],
+        splittedContent[1],
+        splittedContent[2],
+        splittedContent[3],
+        splittedContent[4],
+        splittedContent[5],
+        splittedContent[6],
+        splittedContent[7],
+        splittedContent[8],
+        splittedContent[9],
+        splittedContent[10],
+        splittedContent[11],
+        splittedContent[12],
+        splittedContent[13],
+        splittedContent[14],
+        splittedContent[15],
+        splittedContent[16],
+        splittedContent[17],
+        splittedContent[18],
+        semester
+    );
+}
+
+function readOneRowOld(content) {
     let splittedContent = content.split(';');
         
     if (splittedContent.length < 14) {
@@ -164,17 +206,23 @@ function readOneRow(content) {
 }
 
 async function readAllRows() {
-    let result = [];
+    const result = [];
 
     try {
-        let res = await fetch('js/resources/fakultety2024_2025.csv');
-        let text = await res.text();
+        const res = await fetch('js/resources/tab.tsv');
+        const text = await res.text();
 
-        let lines = text.split(/\r\n|\n/);
+        const lines = text.split(/\r\n|\n/);
+        let firstLine = true;
 
         lines.forEach(line => {
-            let parsed = readOneRow(line);
-            result.push(parsed);
+            if (!firstLine) {
+                const parsed = readOneRow(line);
+                result.push(parsed);
+            }
+            else {
+                firstLine = false;
+            }            
         });
     }
     catch (e) {
@@ -185,14 +233,14 @@ async function readAllRows() {
 }
 
 function createTmp(query) {
-    let params = new URLSearchParams(query);
-    let parsed = Object.fromEntries(params.entries());
+    const params = new URLSearchParams(query);
+    const parsed = Object.fromEntries(params.entries());
 
     document.cookie = "row=" + encodeURIComponent(JSON.stringify(parsed)) + "; path=/; max-age:60";
 }
 
 function filterContains(list, column, value) {
-    let resultList = [];
+    const resultList = [];
 
     list.forEach(r => {
         if (r.attributes[column].toLowerCase().includes(value.toLowerCase())) {
@@ -204,7 +252,7 @@ function filterContains(list, column, value) {
 }
 
 function filterEqual(list, column, value) {
-    let resultList = [];
+    const resultList = [];
 
     list.forEach(r => {
         if (r.attributes[column].toLowerCase() === value.toLowerCase()) {
@@ -216,7 +264,7 @@ function filterEqual(list, column, value) {
 }
 
 function filterGreaterEqualThan(list, column, value) {
-    let resultList = [];
+    const resultList = [];
 
     list.forEach(r => {
         if (r.attributes[column].toLowerCase() >= value.toLowerCase()) {
@@ -228,7 +276,7 @@ function filterGreaterEqualThan(list, column, value) {
 }
 
 function filterLowerEqualThan(list, column, value) {
-    let resultList = [];
+    const resultList = [];
 
     list.forEach(r => {
         if (r.attributes[column].toLowerCase() <= value.toLowerCase()) {
@@ -240,7 +288,7 @@ function filterLowerEqualThan(list, column, value) {
 }
 
 function getDistinctColumnValues(list, column) {
-    let resultList = [];
+    const resultList = [];
 
     list.forEach(r => {
         if (!resultList.includes(r.attributes[column])) {
@@ -273,8 +321,6 @@ function createTable(rows) {
     `;
 
     rows.forEach(r => {
-        console.log(r);
-
         content += `
                     <tr>
                         <td>${r.attributes["Course Name"]}</td>

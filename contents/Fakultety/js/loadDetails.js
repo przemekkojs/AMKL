@@ -41,12 +41,13 @@ if (cookieRow) {
             <b>ECTS sem. letni:</b> ${r['ECTS Summer']}<br/>
             <b>ECTS łącznie:</b> ${r['ECTS Combined']}<br/>
             <b>Wydział:</b> ${r['Faculty']}<br/>
-            <b>Nazwa wydziału:</b> ${r['Faculty Name']}<br/>
+            <b>Jednostka:</b> ${r['Faculty Name']}<br/>
             <b>Dzień tygodnia:</b> ${r['Weekday']}<br/>
             <b>Godzina rozpoczęcia:</b> ${r['Start Hour']}<br/>
             <b>Godzina zakończenia:</b> ${r['End Hour']}<br/>
             <b>Dodatkowe informacje:</b> ${addInfo}<br/>
             <b>Dodatkowe informacje o zaliczeniu:</b> ${addPassInfo}<br/>
+            <b>Semestr:</b> ${r['Semester']}<br/>
         </p>        
     `;
 }
