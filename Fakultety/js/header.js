@@ -16,7 +16,7 @@ header.innerHTML = `
                     Pomoc
                     <ol class="submenu">
                         <a href="info.html"><li>Informacje</li></a>
-                        <a href="https://github.com/przemekkojs/Fakultety" target="_blank"><li>GitHub</li></a>
+                        <a href="index.html" target="_blank"><li>GitHub</li></a>
                     </ol>
                 </li>
             </ul>

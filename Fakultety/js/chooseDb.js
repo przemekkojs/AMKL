@@ -24,4 +24,4 @@ function saveToCookie(filename) {
     window.location.replace(newPath);
 }
 
-getFilesList()
+getFilesList();
