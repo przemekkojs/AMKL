@@ -23,4 +23,9 @@
         margin-left: 3%;
         margin-right: 3%;
     }
+
+    .menu {
+        font-family: inherit;
+        font-size: 128px;
+    }
 }
