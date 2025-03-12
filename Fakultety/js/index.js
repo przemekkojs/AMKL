@@ -307,13 +307,40 @@ function getDistinctColumnValues(list, column) {
     return resultList;
 }
 
-function createTable(rows) {
-    let content = "";
+function resultsForm(rowsLength) {
+    const opt1 = 'wyniki';
+    const opt2 = 'wyników';
+    const opt3 = 'wynik';
+    const lengthStr = rowsLength.toString();
 
-    content += `
+    if (lengthStr === '' || lengthStr === '1')
+        return opt3;
+    
+    const last = lengthStr[lengthStr.length - 1];   
+
+    switch (last) {
+        case '0':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            return opt2;
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+            return opt1;
+    }
+}
+
+function createTable(rows) {
+    const rowsLength = rows.length;
+
+    let content = `
         <div>
             <div style="text-align:left; margin: 5px; color: red;">
-                Znaleziono ${rows.length} wyników
+                Znaleziono ${rowsLength} ${resultsForm(rowsLength)}
             </div>
 
             <table>
@@ -331,13 +358,12 @@ function createTable(rows) {
     rows.forEach(r => {
         content += `
                     <tr>
-                        <td>${r.attributes["Course Name"]}</td>
+                        <td><a href="details.html" target="_blank" onclick="createTmp('${r.queryString()}')">${r.attributes["Course Name"]}</a></td>
                         <td>${r.attributes["Teacher"]}</td>
                         <td>${r.attributes["Weekday"]}</td>
                         <td>${r.attributes["Start Hour"]}</td>
                         <td>${r.attributes["End Hour"]}</td>
                         <td>${r.attributes["ECTS Combined"]}</td>
-                        <td><a class="button" href="details.html" target="_blank" onclick="createTmp('${r.queryString()}')">Szczegóły</a></td>
                     </tr>
         `
     });
