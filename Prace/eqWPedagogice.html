@@ -1,167 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            html {
-                font-family: 'Garamond';
-                background-color: #DDDDDD;
-                font-size: 16px;
-                background-image: linear-gradient(red, yellow, green);
-            }
-
-            @media screen and (max-width: 480px) {
-                body {
-                    margin-left: 5%;
-                    margin-right: 5%;                
-                }
-            }
-
-            @media screen and (min-width: 481px) and (max-width: 768px) {
-                body {
-                    margin-left: 10%;
-                    margin-right: 10%;                
-                }
-            }
-
-            @media screen and (min-width: 769px) and (max-width: 1200px) {
-                body {
-                    margin-left: 15%;
-                    margin-right: 15%;                
-                }
-            }
-
-            @media screen and (min-width: 1201px) {
-                body {
-                    margin-left: 20%;
-                    margin-right: 20%;                
-                }
-            }
-
-            a {
-                text-decoration: none;
-                color: inherit;
-                cursor: pointer;
-            }
-
-            .sheet {
-                background-color: #FFFFFF;
-                border-radius: 10px;
-                padding: 24px;
-                box-shadow: 5px 5px 5px black;
-            }
-
-            .title {
-                font-size: 40px;
-            }
-
-            .section-title {
-                font-size: 30px;
-                margin-bottom: -8px;
-            }
-
-            .sub-section-title {
-                font-size: 20px;
-                margin-bottom: -8px;
-            }
-
-            .line {
-                border: 1px solid #DDDDDD;
-            }
-
-            .w-70 {
-                width: 70%;
-            }
-
-            .w-30 {
-                width: 30%;
-            }
-
-            .flex {
-                display: flex;
-            }
-
-            .p-1 {
-                padding: 2px;
-            }
-
-            .p-2 {
-                padding: 4px;
-            }
-
-            .p-3 {
-                padding: 8px;
-            }
-
-            .footer {
-                text-align: center;
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
-
-            .hint {
-                cursor: help;
-            }
-
-            .hint:hover {
-                color: red;
-                transition-duration: 0.1s;
-            }
-
-            .highlight {
-                background-color: #fff0cc;
-                border-radius: 5px;
-            }
-
-            .quote {
-                background-color: #EFEFEF;
-                border-radius: 10px;
-                padding: 10px;
-                text-align: center;
-                font-style: italic;
-                max-width: 50%;
-                margin: auto;
-                font-size: 18px;
-
-                margin-top: 10px;
-                margin-bottom: 10px;
-
-                transition: background-color 0.3s, box-shadow 0.3s;
-            }
-
-            .quote:hover {
-                background-color: #fff0cc;
-                box-shadow: 5px 5px 10px black;
-            }
-
-            sup {
-                color: #0077ff;
-            }
-
-            p {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-        </style>
-
+    <head>        
         <title>EQ w pedagogice</title>
-        <link type="image/x-icon" rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0whMpQsRnULVHYDxLYNWtcfKK1aJ6FqXphQ&s">
+        <link rel="stylesheet" href="css/style.css">
+        <link type="image/x-icon" rel="icon" href="img/eq.webp">
     </head>
     <body>
         <main class="sheet">
             <header>
+                <div>
+                    <a href="../index.html" class="return">Powrót</a>
+                </div>
+
                 <div class="flex">
                     <div class="w-70 p-2">
-                        <h1 class="title">Znaczenie i rola inteligencji emocjonalnej w szkolnictwie artystycznym - perspektywa pedagoga i ucznia.</h1>
+                        <h1 class="title">Znaczenie i rola inteligencji emocjonalnej w szkolnictwie artystycznym - perspektywa pedagoga i ucznia</h1>
                     </div>
 
                     <div class="w-30 p-2">
                         <h3>
-                        Przemysław Kojs <br/>
-                        Nr indeksu: 8586 <br/>
-                        Wydział Instrumentalny <br/>
-                        Klasa organów <br/>
-                        Studia 1. stopnia (lic.): III semestr <br/>
-                        Studium pedagogiczne: I semestr
+                            Przemysław Kojs <br/>
+                            Nr indeksu: 8586 <br/>
+                            Wydział Instrumentalny <br/>
+                            Klasa organów <br/>
+                            Studia 1. stopnia (lic.): III semestr <br/>
+                            Studium pedagogiczne: I semestr
                         </h3>
                     </div>             
                 </div>                   
@@ -189,7 +52,7 @@
                                 <li><a href="#q-7" onclick="highlightElement('q-7')">Czy nauczyciele wystarczająco wspierali uczniów w rozwijaniu i kształtowaniu sfery społeczno-emocjonalnej?</a></li>
                             </ul>
                         </li>
-                        <li><a href="#summary" onclick="highlightElement('summary')">Wprowadzenie</a></li>
+                        <li><a href="#summary" onclick="highlightElement('summary')">Podsumowanie</a></li>
                         <li><a href="#sources" onclick="highlightElement('sources')">Źródła</a></li>
                     </ol>
                 </section>
@@ -546,19 +409,6 @@
             </footer>
         </main>
 
-        <script>
-            function highlightElement(id) {
-                const element = document.getElementById(id);
-                const highlightClass = "highlight";
-    
-                if (element) {
-                    element.parentElement.classList.add(highlightClass);
-    
-                    setTimeout(() => {
-                        element.parentElement.classList.remove(highlightClass);
-                    }, 3000)
-                }
-            }
-        </script>
+        <script src="js/script.js"></script>
     </body>
 </html>
