@@ -39,7 +39,10 @@
 
                     <ol>
                         <li><a href="#introduction" onclick="highlightElement('introduction')">Wprowadzenie</a></li>
-                                                
+                        <li><a href="#definitions" onclick="highlightElement('definitions')">Definicje</a></li>
+                        <li><a href="#resonators-body" onclick="highlightElement('resonators-body')">Rezonatory w ciele</a></li>
+                        <li><a href="#resonance-causes" onclick="highlightElement('resonance-causes')">Co wpływa na rezonans</a></li>
+                        <li><a href="#experience" onclick="highlightElement('experience')">Moje doświadczenie</a></li>               
                         <li><a href="#summary" onclick="highlightElement('summary')">Podsumowanie</a></li>
                         <li><a href="#sources" onclick="highlightElement('sources')">Źródła</a></li>
                     </ol>
@@ -47,9 +50,202 @@
 
                 <section>
                     <h3 class="section-title" id="introduction">Wprowadzenie</h3>
+
+                    <p>
+                        Celem pracy jest opisanie zjawiska rezonansu oraz roli jego i rezonatorów, w kontekście aparatu mowy.
+                        Ponieważ zadaną formą był <b>esej</b> - w rozważaniach odwołuję się do wielu naukowych źródeł, które zostały
+                        wymienione w przypisanej im sekcji (<a href="#sources" onclick="highlightElement('sources')">kliknij, by przejść</a>).
+                        Nie były one jednak w żaden sposób narzucone, zatem pozwoliłem sobie <i>poszperać</i> w odmętach internetu i wybrać -
+                        moim zdaniem - te najciekawsze.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="definitions">Definicje</h3>
                         
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore earum tenetur magnam est accusamus possimus, consectetur dolor consequuntur voluptates, dolore autem dicta officia delectus dolorum aliquid velit optio debitis illo.
+                        <b>Rezonans</b> jest zjawiskiem fizycznym, konkretniej szybkim wzrostem amplitudy drgań układu fizycznego, gdy częst. zewn.
+                        drgań wymuszających <i>f </i> jest zbliżona do częstotliwości drgań własnych układu <i>f<sub>0</sub></i>
+                        <sup><a href="#source-1" onclick="highlightElement('source-1')">[1]</a></sup>. Co ciekawe, po raz pierwszy został
+                        zauważony przez Galileusza w 1602 r.<sup><a href="#source-2" onclick="highlightElement('source-2')">[2]</a></sup>
+                        Ścisłe opisania zostały opracowane w latach późniejszych, przez np. Isaaca Newtona.
+                    </p>
+
+                    <p>
+                        Rezonans w układzie drgającym można opisać równaniem ruchu oscylatora wymuszonego tłumionego:
+                        
+                        <div class="img-div">
+                            <img src="img/resonance.png" alt="Obraz przedstawiający wzór fizyczny rezonansu">
+                        </div>
+                    </p>
+                        
+                    <p>
+                        gdzie:
+                        <ul>
+                            <li>m - masa układu</li>
+                            <li>b - współczynnik tłumienia</li>
+                            <li>k - współczynnik sprężystości</li>
+                            <li>x - wychylenie</li>
+                            <li>F<sub>0</sub> - amplituda siły wymuszającej</li>
+                            <li>ω - częstotliwość siły wymuszającej</li>
+                            <li>f<sub>0</sub> - częstotliwość drgań własnych = 1/(2π)√(k/m). W kontekście rezonansu mogą pojawić się również dodatkowe czynniki.</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        Niezwykle ważne jest również założenie, że <b>siła wymuszająca działa okresowo</b>.
+                    </p>
+
+                    <p>
+                        Rezonans zachodzi, gdy ω ≈ f<sub>0</sub>, co prowadzi do znacznego wzrostu amplitudy. W przypadku braku tłumienia
+                        (b = 0), amplituda → ∞, przy ω = f<sub>0</sub>.
+
+                        Amplituda opisywana jest następującym równaniem:
+
+                        <div class="img-div">
+                            <img src="img/amplitude.png" alt="Obraz przedstawiający wzór fizyczny na amplitudę drgań">
+                        </div>
+                    </p>
+
+                    <p>
+                        W kontekście aparatu mowy, mamy do czynienia z <b>rezonansem akustycznym</b>. gdy ciało elastyczne o ściśle
+                        określonej liczbie drgań własnych zostaje wprowadzone w drgania przez fale akustyczne, wywołane przez sąsiadując
+                        z nim źródło dźwięku o tej samej częstotliwości drgań<sup><a href="#source-3" onclick="highlightElement('source-3')">[3]</a></sup>
+                        <sup><a href="#source-4" onclick="highlightElement('source-4')">[4]</a></sup>. Rezonans uznawany jest także za synonim drgań
+                        odczuwanych w czasie wydawania głosu<sup><a href="#source-4" onclick="highlightElement('source-4')">[4]</a></sup>.
+                    </p>
+
+                    <p>
+                        Sam rezonas to jednak nie wszystko - jeżeli drgania nie mają odpowiedniego ośrodka, w którym mogą swobodnie się rozchodzić,
+                        to nie odniesiemy pożądanego efektu. Takie ośrodki zwane są <b>rezonatorami</b>. Jest to:
+                        <div class="quote">
+                            układ akustyczny zamykający pewną
+                            przestrzeń powietrzną ograniczoną sztywnymi ścianami. (...) Krtań człowieka jest właśnie takim rezonatorem w kształcie
+                            rury zamkniętej z jednej strony przez zwarte więzadła głosowe<sup><a href="#source-3" onclick="highlightElement('source-3')">[3]</a></sup>.
+                        </div>
+                    </p>
+
+                    <p>
+                        Bez rezonatorów nie będziemy mieli takich elementów jak:
+
+                        <ul class="reset-list">
+                            <li>barwa</li>
+                            <li>zróżnicowanie dynamiczne</li>
+                            <li>wzmocnienie dynamiczne</li> 
+                        </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="resonators-body">Rezonatory w ciele</h3>
+                        
+                    <p>
+                        Rezonator jest to zatem wszystko, co jest w stanie przenosić drgania, co z kolei wpływa na wzmocnienie dźwięku.
+                        W ludzkim ciele rezonatory to m.in.<sup><a href="#source-5" onclick="highlightElement('source-5')">[5]</a></sup>:
+
+                        <ul class="reset-list">
+                            <li>krtań i gardło</li>
+                            <li>jama nosowa</li>
+                            <li>jama ustna</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        Tymi rezonatorami możemy regulować - operując policzkami, językiem, ustami, podniebieniem miękkim, co z kolei wpływa
+                        na przeróżne parametry dźwięku.
+                    </p>
+
+                    <p>
+                        Rezonatorami są też sztywne elementy naszego ciała - <b>kości</b> - przede wszystkim czaszki, kość klatki piersiowej,
+                        czy górna część kręgosłupa<sup><a href="#source-5" onclick="highlightElement('source-5')">[5]</a></sup>.
+                    </p>
+
+                    <p>
+                        Rezonatory można podzielić ze względu na umiejscowienie w ciele. Granicą umowną jest <b>głośnia</b> (szpara głosowa,
+                        tworzona przez fałdy głosowe). Podział zawiera<sup><a href="#source-4" onclick="highlightElement('source-4')">[4]</a></sup>:
+
+                        <ol class="reset-list">
+                            <li>
+                                <u>Rezonator górny</u> - obejmuje 3 komory rezonansowe (gardło z ktranią, jamę nosową, jamę ustną).
+                                Głos uzyskuje tutaj odpowiednią siłę przez wzmocnienie albo osłabienie niektórych składowych tonu
+                                krtaniowego w odpowiednich jamach rezonujących. 
+                            </li>
+                            <li><u>Rezonator dolny</u> - po prostu klatka piersiowa</li>
+                        </ol>
+                    </p>
+
+                    <p>
+                        W kontekście rezonansu głosu ludzkiego - konkretniej różnicowania - zdecydowanie większe znaczenie ma rezonator głowy -
+                        przede wszystkim dlatego, że możemy regulować nim w bardzo dużym zakresie, głównie w kontekście barwy. Rezonator piersiowy
+                        daje nieco ciemne, zduszone zabarwienie.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="resonance-causes">Co wpływa na rezonans</h3>
+
+                    <p>
+                        Rezonatory to nie wszystko - trzeba umieć poprawnie się posługiwać głosem, żeby wykorzystać ich pełen potencjał.
+                        Prawidłowy rezonans charakteryzuje się swobodnym drganiem części kostnych czaszki oraz współdrganiem powietrza
+                        zawartego w komorach rezonacyjnych<sup><a href="#source-4" onclick="highlightElement('source-4')">[4]</a></sup>.
+                    </p>
+
+                    <p>
+                        W kontekście posługiwania się głosem wyróżniamy 3 tzw. rejestry, z których każdy jest <i>podpięty</i> do innego
+                        rezonatora (albo zestawu rezonatorów)<sup><a href="#source-4" onclick="highlightElement('source-4')">[4]</a></sup>:
+                        
+                        <ul>
+                            <li><u>Rejestr całościowy (piersiowy)</u> - związany z rejestrem piersiowym</li>
+                            <li><u>Rejestr brzegowy (głowowy)</u> - związany z rejestrem głowowym</li>
+                            <li>
+                                <u>Rejestr mieszany (średni)</u> - w zależności od wysokości i natężenia dźwięku, jest mieszanką
+                                między rejestrem piersiowym i głowowym.
+                            </li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        W mowie posługujemy się głównie rejestrem piersiowym - a co za tym idzie - rezonatorem piersiowym. Jak wspominałem wyżej,
+                        ten rezonator daje nieco bardziej głuche brzmienie, a próbując mówić głośniej często próbujemy na siłę przeforsować głos.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="experience">Moje doświadczenie</h3>
+                        
+                    <p>
+                        Praca miała mieć formę eseju, a na ten moment przypomina bardziej pracę naukową. Pozwolę sobie zatem dodać trochę swoich
+                        rozważań, żeby zachować zgodność ze specyfikacją zadania.
+                    </p>
+
+                    <p>
+                        Właściwa emisja głosu jest szczególnie ważna w życiu muzyka - nie tylko pedagoga. Trzeba potrafić opowiedzieć o sobie tak,
+                        by ludzie to wyraźnie słyszeli i nie odnosili wrażenia krzyczenia czy nadmiernego forsowania głosu.
+                    </p>
+
+                    <p>
+                        Kiedyś miałem dość spore problemy z mówieniem czy śpiewaniem donośnie - nie ważne, jak się starałem, zawsze byłem zagłuszany.
+                        Przy okazji pisania pracy dość dobrze zastanowiłem się, co tak właściwie sprawiło, że te problemy zniknęły, napiszę zatem właśnie
+                        o tym - może ktoś się zainspiruje?
+                    </p>
+
+                    <p>
+                        Przede wszystkim - stałem się starszy - człowiek rośnie, a wraz z nim rozwijają się wszystkie rezonatory. Jeżeli martwisz się, że
+                        nie potrafisz mówić głośno, zastanów się, ile dorastania jeszcze ci zostało?
+                    </p>
+
+                    <p>
+                        Inne aspekty to z pewnością trening głosu - śpiewanie, mówienie przed ludźmi przy okazji koncertów czy nawet rozmowy z rówieśnikami.
+                        Krótko mówiąc: trzeba używać głosu, jednocześnie zwracając uwagę, czy nie odczuwamy przy tym zmęczenia gardła. Takie trochę <i>świadome mówienie</i>,
+                        nie tylko pod względem merytorycznym (chociaż nad tym również wypada pracować).
+                    </p>
+
+                    <p>
+                        Intonacja - używając jej również operujemy różnymi rejestrami. Warto ćwiczyć intonację z myślą o rezonatorze, który jest w użyciu.
+                    </p>
+
+                    <p>
+                        To raczej mało wartościowe wskazówki, niemniej jednak - uważam że warto było o tym co nieco powiedzieć.
                     </p>
                 </section>
 
@@ -57,7 +253,9 @@
                     <h3 class="section-title" id="summary">Podsumowanie</h3>
                         
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat inventore a, fugiat quidem dicta sunt ipsum eos labore, repellat veritatis praesentium id, dolor porro dolorum quasi animi atque voluptates. Omnis!
+                        Podsumowując, rezonans jest nieodłącznym elementem emisji głosu, bazą do zmiany brzmienia. Świadome wykorzystywanie odpowiednich
+                        przestrzeni może znacznie wpłynąć na jego plastyczność, brzmienie, barwę, natężenie, nasycenie i wiele innych. Należy unikać
+                        forsowania głosu oraz umiejętnie i świadomie korzystać z rezonatorów<sup><a href="#source-6" onclick="highlightElement('source-6')">[6]</a></sup>.
                     </p>
                 </section>
 
@@ -66,9 +264,23 @@
                 <section>
                     <h3 class="section-title" id="sources">Źródła</h3>
 
-                    <ul>
-                        <li><sup>1</sup><a href="" target="_blank" id="source-4"></a></li>                        
-                    </ul>
+                    <p>
+                        Podczas pisania korzystałem z następujących źródeł:
+
+                        <ul class="reset-list">
+                            <li><sup>1</sup><a href="https://encyklopedia.pwn.pl/haslo/;3967575" target="_blank" id="source-1"> Internetowa Encyklopedia PWN, hasło <i>rezonans</i>.</a></li>
+                            <li><sup>2</sup><a href="http://books.google.com/books?id=sp8_hrRI2MoC&pg=PA41&dq=galileo+1602+pendulum#v=onepage&q=galileo%201602%20pendulum&f=false" target="_blank" id="source-2"> Stillman Drake, Noel M. Swerdlow, and Trevor Harvey Levere: Essays on Galileo and the history and philosophy of science (1999, str. 41-42)</a></li>
+                            <li><sup>3</sup><a href="https://books.google.pl/books/about/Akustyka_psychofizjologiczna_w_medycynie.html?id=v3lSHAAACAAJ&redir_esc=y" target="_blank" id="source-3"> A. Mitrinowicz-Modrzejewska: Akustyka psychofizjologiczna w medycynie. Warszawa, PZWL 1974, str. 173</a></li>
+                            <li><sup>4</sup><a href="https://cejsh.icm.edu.pl/cejsh/element/bwmeta1.element.desklight-9e3cf562-0527-4ee0-8d88-9e1524b2f1b2/c/12_Danel_104-110_.pdf" target="_blank" id="source-4"> Renata Danel: Rezonans a rejestry głosowe. Akademia Muzyczna im. Karola Szymanowskiego w Katowicach</a></li>
+                            <li><sup>5</sup><a href="https://zpe.gov.pl/a/aparat-glosowy---cwiczymy-glos/D14rGfaiX" target="_blank" id="source-5"> zpe.gov.pl - aparat głosowy, rozdział o rezonatorach</a></li>
+                            <li><sup>6</sup><a href="https://akademia-spiewu.pl/blog/zjawisko-rezonansu-w-mowie-oraz-spiewie/" target="_blank" id="source-6"> Akademia śpiewu - zjawisko rezonansu w mowie oraz śpiewie, akapit 2.</a></li>
+                        </ul>    
+                    </p>
+                    
+                    <p>
+                        Równania matematyczne, nieoznaczone wnioski są bazowane na moim własnym doświadczeniu. Korzystałem również z zewnętrznych
+                        technologii, m.in. <i>LaTeX</i>.
+                    </p>                    
                 </section>
             </article>
 
@@ -82,7 +294,7 @@
                 <div>
                     Praca została napisana na potrzeby przedmiotu <i>Emisja Głosu</i>, prowadzonego przez
                     <a href="https://amuz.wroc.pl/mgr-malgorzata-wrzesien-wrobel-8624" target="_blank">p. mgr Małgorzatę Wrzesień-Wróbel</a>.
-                    Termin oddania: <a href="https://www.kalbi.pl/18-grudnia" target="_blank"><u>Nieznany</u></a>
+                    Termin oddania: <a href="https://www.kalbi.pl/18-grudnia" target="_blank"><u>17.03.2025</u></a>
                 </div>
             </footer>
         </main>

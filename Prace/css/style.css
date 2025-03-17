@@ -147,3 +147,15 @@ p {
     content: "< ";
     font-weight: bold;
 }
+
+.img-div {
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+.reset-list {
+    margin-top: -15px;
+}
