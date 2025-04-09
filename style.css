@@ -71,3 +71,7 @@ a {
 .link {
     color: blue;
 }
+
+.indent-25 {
+    text-indent: 25px;
+}
