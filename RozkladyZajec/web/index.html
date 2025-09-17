@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Kreator rozkładów zajęć</title>
+        <link rel="icon" href="img/icon.png" type="image/png">        
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1 class="title">Kreator rozkładów zajęć</h1>
+            </header>
+
+            <article>
+                <div class="container">
+                    <div class="align-left">
+                        <p>
+                            <input type="button" value="Załaduj" id="load-button" class='normal-button button' onclick="load()">
+                            <input type="button" value="Zapisz" id="save-button" class='normal-button button' onclick="save()">
+                        </p>                        
+
+                        <p>
+                            <span id="processing"></span>
+                        </p>
+                    </div>                    
+
+                    <hr>
+
+                    <table>
+                        <thead>Tabela główna</thead>
+                        <tbody id="main-table">
+                            <tr>                                
+                                <th>Przedmiot</th>
+                                <th>Zakres</th>
+                                <th>Prowadzący</th>
+                                <th>Dzień</th>
+                                <th>Godzina rozpoczęcia</th>
+                                <th>Godzina zakończenia</th>
+                                <th>Sala</th>
+                                <th>Przydział indywidualny</th>
+                                <th>Uwaga</th>
+                                <th>Akcja</th>
+                            </tr>
+                        </tbody>                
+                    </table>
+
+                    <input type="button" value="+" onclick="addRow()">
+                    
+                    <hr style="margin-bottom: 25px">
+
+                    <table>
+                        <thead>Tabela uwag</thead>
+                        <tbody id="details-table">
+                            <tr>
+                                <th>Id</th>
+                                <th>Treść</th>
+                                <th>Akcja</th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <input type="button" value="+" onclick="addDetail()">
+                </div>
+            </article>
+
+            <footer>
+
+            </footer>            
+        </main>        
+    </body>
+
+    <script src="js/index.js"></script>
+</html>

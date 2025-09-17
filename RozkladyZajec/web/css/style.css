@@ -1,0 +1,74 @@
+html {
+    background-color: #dddddd;
+    color: #000000;
+    font-size: 10pt;
+}
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+main {
+    margin: 0;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+table {
+    text-align: left;
+    margin: 10px;
+}
+
+td, th {
+    width: 9%;
+}
+
+#main-table input[type='text'], input[type='date'], input[type='time'], select {
+    width: 90%;
+    margin: 5%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #999999;
+    min-height: 1.5rem;
+}
+
+#details-table input[type='text'] {
+    margin: 5%;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #999999;
+    width: 90%;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: -8px;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.remove-button {
+    background-color: #ff0000;
+}
+
+.normal-button {
+    background-color: #0055ff;
+    width: 100px;
+}
