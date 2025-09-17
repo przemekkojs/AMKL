@@ -1,5 +1,3 @@
-
-
 const table = document.getElementById('main-table');
 const detailsTable = document.getElementById('details-table');
 
