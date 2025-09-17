@@ -70,7 +70,8 @@
                 <section>
                     <h3>Narzędzia 🔨</h3>
                     <p class="indent-25"><a href="Fakultety/index.html" target="_blank" class="link">Asystent wyboru fakultetów</a></p>
-                    <p class="indent-25"><a href="Testownik/index.html" target="_blank" class="link">Testownik</a></p>     
+                    <p class="indent-25"><a href="Testownik/index.html" target="_blank" class="link">Testownik</a></p>
+                    <p class="indent-25"><a href="RozkladyZajec/web/index.html" target="_blank" class="link">Kreator rozkładów zajęć</a></p>
                 </section>
                 
                 <section>
@@ -84,7 +85,12 @@
         </main>
 
         <footer class="footer">
-            &copy; Przemysław Kojs 2024
+            &copy; Przemysław Kojs <span id="current-year"></span>
         </footer>
     </body>
+
+    <script>
+        const curYear = document.getElementById('current-year');
+        curYear.innerText = new Date().getFullYear();
+    </script>
 </html>
