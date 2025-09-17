@@ -1,3 +1,5 @@
+
+
 const table = document.getElementById('main-table');
 const detailsTable = document.getElementById('details-table');
 
@@ -239,8 +241,102 @@ function resetText() {
     3000);
 }
 
+function clearAll() {
+    ids.clear();
+    detailsIds.clear();
+
+    currentId = 0;
+    detailId = 0;
+
+    table.replaceChildren();
+    table.innerHTML = `
+        <tr>                                
+            <th>Przedmiot</th>
+            <th>Zakres</th>
+            <th>Prowadzący</th>
+            <th>Dzień</th>
+            <th>Godzina rozpoczęcia</th>
+            <th>Godzina zakończenia</th>
+            <th>Sala</th>
+            <th>Przydział indywidualny</th>
+            <th>Uwaga</th>
+            <th>Akcja</th>
+        </tr>
+    `;
+
+    detailsTable.replaceChildren();
+
+    detailsTable.innerHTML = `
+        <tr>
+            <th>Id</th>
+            <th>Treść</th>
+            <th>Akcja</th>
+        </tr>
+    `;
+}
+
 function load() {
     if (!confirm("Czy na pewno chcesz załadować nowe dane? Wszelkie niezapisane zmiany zostaną utracone")) {
         return;
     }
+
+    clearAll();
+
+    const fileInput = document.createElement('input');
+    fileInput.setAttribute('type', 'file');
+
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+
+        if (file) {            
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                try {
+                    const jsonData = JSON.parse(e.target.result);
+                    createFromScratch(jsonData)
+                } catch (error) {
+                    console.error(error);
+                }
+            };
+
+            reader.readAsText(file);
+        }
+    });
+
+    fileInput.click();
+}
+
+function createFromScratch(jsonData) {
+    console.log(jsonData);
+
+    const mainData = jsonData.main;
+    const detailsData = jsonData.details;
+
+    detailsData.forEach(element => {
+        const detId = detailId;
+        addDetail();
+
+        document.getElementById(`detail-id-${detId}`).value = element['detail-id'];
+        document.getElementById(`detail-desc-${detId}`).value = element['detail-desc'];
+    });
+
+    mainData.forEach(element => {
+        const curId = currentId;
+        addRow();
+
+        const fields = ['subject', 'level', 'teacher', 'day', 'startHour', 'endHour', 'room', 'individual', 'details'];
+
+        fields.forEach(field => {
+            const elementId = `${field}-${curId}`;
+            const domElement = document.getElementById(elementId);
+
+            if (domElement) {
+                if (field !== 'individual')
+                    domElement.value = element[field];
+                else
+                    domElement.checked = element[field];
+            }
+        });
+    });
 }
