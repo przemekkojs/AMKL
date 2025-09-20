@@ -211,13 +211,14 @@ async function readAllRows() {
     try {
         const filename = localStorage.getItem('filename');
 
-        if (!filename || filename === "") {
-            const currentPath = window.location.pathname;
-            const newPath = currentPath.replace("index.html", "loadDb.html");
-            window.location.replace(newPath);
-        }
+        // if (!filename || filename === "") {
+        //     const currentPath = window.location.pathname;
+        //     const newPath = currentPath.replace("index.html", "loadDb.html");
+        //     window.location.replace(newPath);
+        // }
 
-        const res = await fetch(`js/resources/${filename}`);
+        const res = await fetch(`js/resources/fakultety2025_2026.tsv`);
+        //const res = await fetch(`js/resources/${filename}`);
         const text = await res.text();
 
         const lines = text.split(/\r\n|\n/);
