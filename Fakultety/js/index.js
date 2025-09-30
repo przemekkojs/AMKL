@@ -257,7 +257,7 @@ function filterContains(list, column, value) {
         }
     });
 
-    return resultList;
+    return resultList.sort();
 }
 
 function filterEqual(list, column, value) {
@@ -269,7 +269,7 @@ function filterEqual(list, column, value) {
         }
     });
 
-    return resultList;
+    return resultList.sort();
 }
 
 function filterGreaterEqualThan(list, column, value) {
@@ -281,7 +281,7 @@ function filterGreaterEqualThan(list, column, value) {
         }
     });
 
-    return resultList;
+    return resultList.sort();
 }
 
 function filterLowerEqualThan(list, column, value) {
@@ -293,7 +293,7 @@ function filterLowerEqualThan(list, column, value) {
         }
     });
 
-    return resultList;
+    return resultList.sort();
 }
 
 function getDistinctColumnValues(list, column) {
@@ -305,7 +305,7 @@ function getDistinctColumnValues(list, column) {
         }
     });
 
-    return resultList;
+    return resultList.sort();
 }
 
 function resultsForm(rowsLength) {
