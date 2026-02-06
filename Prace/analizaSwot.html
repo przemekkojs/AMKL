@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TYTUŁ</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link type="image/x-icon" rel="icon" href="img/piano.png">
+    </head>
+
+    <body>
+        <main class="sheet">
+            <header>
+                <div>
+                    <a href="../index.html" class="return">Powrót</a>
+                </div>
+
+                <div class="flex">
+                    <div class="w-70 p-2">
+                        <h1 class="title">Multimedialny Koncert Muzyki Filmowej - Analiza SWOT</h1>
+                    </div>
+
+                    <div class="w-30 p-2">
+                        <h3>
+                            Przemysław Kojs <br/>
+                            Nr indeksu: 8586 <br/>
+                            Wydział Instrumentalny <br/>
+                            Klasa organów <br/>
+                            Studia 1. stopnia (lic.): V semestr <br/>
+                            Studium pedagogiczne: III semestr
+                        </h3>
+                    </div>             
+                </div>
+            </header>
+
+            <hr class="line">
+
+            <article>
+                <section>
+                    <h3 class="section-title" id="word-list">Spis treści</h3>
+
+                    <ol>
+                        <li><a href="#introduction" onclick="highlightElement('introduction')">Wprowadzenie</a></li>
+                        <li><a href="#summary" onclick="highlightElement('summary')">Podsumowanie</a></li>
+                        <li><a href="#sources" onclick="highlightElement('sources')">Źródła</a></li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="introduction">Wprowadzenie</h3>
+
+                    <p>
+                        Celem ninejszego dokumentu jest przeprowadzenie analizy SWOT dotyczącej organizacji
+                        <i>Multimedialnego Koncertu MuzykiFilmowej</i>. Koncert jest oczywiście (na ten moment) fikcyjny,
+                        niewykluczone natomiast, że dojdzie kiedyś w jakiejś nieokreślonej formie do skutku.
+                    </p>
+
+                    <p>
+                        Analiza SWOT pozwoli zidentyfikować mocne i słabe strony tego przedsięwzięcia, a także szanse i
+                        zagrożenia, które mogą wpłynąć na jego sukces, zgodnie z dostarczoną w e-mailu definicją:
+
+                        <div class="quote">
+                            Analiza SWOT (z angielskiego: Strengths, Weaknesses, Opportunities, Threats) to metoda analizy strategicznej,
+                            która służy do oceny silnych i słabych stron projektu/organizacji, a także istniejących i potencjalnych szans
+                            i zagrożeń w otoczeniu
+                        </div>
+                    </p>
+
+                    <p>
+                        Analiza SWOT jest zatem narzędziem strategicznym, które pomaga organizacjom zrozumieć swoje wewnętrzne i
+                        zewnętrzne środowisko, co jest kluczowe dla skutecznego planowania i podejmowania decyzji. Ważną kwestią jest kategoryzacja
+                        poszczególnych elementów analizy - <i>Strenghts</i> oraz <i>Weaknesses</i> dotyczą czynników wewnętrznych,
+                        które są kontrolowane przez organizację, natomiast <i>Opportunities</i> oraz <i>Threats</i> odnoszą się do czynników zewnętrznych,
+                        które mogą mieć wpływ na organizację, ale nie są bezpośrednio przez nią kontrolowane.
+                    </p>
+
+                    <p>
+                        Samo wydarzenie natomiast - zgodnie z tytułem - miałoby charakter multimedialny, co oznacza że obecnych będzie
+                        kilka środków przekazu - muzyka na żywo, efekty świetlne i graficzne - a nie tylko jeden (dźwię), jak w 
+                        tradycyjnym koncercie muzycznym.
+                    </p>
+
+                    <p>
+                        Wybranym instrumentem byłyby organy piszczałkowe (oczywiście ze względu na moją specjalizację), nie byłby to
+                        jednak instrument tradycyjny. Zamiast tego, wykorzystane zostałyby organy cyfrowe mojego autorstwa, które
+                        pozwoliłyby na podpięcie do różnych źródeł przekazu z użyciem protokołu MIDI<sup><a href="#source-1" onclick="highlightElement('source-1')">[1]</a></sup>:
+                        
+                        <ul>
+                            <li>
+                                <b>Źródło dźwięku</b> - oprogramowanie <i>Hauptwerk</i><sup><a href="#source-2" onclick="highlightElement('source-2')">[2]</a></sup>,
+                                które umożliwia odtwarzanie próbek dźwiękowych z różnych organów piszczałkowych z całego świata z wykorzystaniem jedynie
+                                komputera osobistego, a także modyfikację ich brzmienia i parametrów. Dzięki temu, możliwe byłoby stworzenie unikalnego instrumentarium,
+                                które idealnie pasowałoby do charakteru koncertu oraz umożliwiłoby dostosowanie do różnych utworów i efektów multimedialnych.
+                            </li>
+
+                            <li>
+                                <b>Kontrolera światła</b> - urządzenie, które pozwoliłoby na sterowanie efektami świetlnymi w czasie rzeczywistym, synchronizując je z muzyką
+                                i innymi elementami multimedialnymi. Kontroler ten mógłby być zaprogramowany do reagowania na różne parametry muzyki, takie jak tempo,
+                                dynamika czy tonacja, co pozwoliłoby na stworzenie spójnej i immersyjnej atmosfery podczas koncertu. Odzwierciedlane byłyby one
+                                poprzez takie zabiegi jak zmiana kolorów, intensywności światła oraz tempa ich migotania czy pulsowania.
+                            </li>
+
+                            <li>
+                                <b>Projektora</b> - urządzenie, które umożliwiłoby wyświetlanie grafik, animacji i innych wizualizacji podczas koncertu z użyciem algorytmów
+                                Sztucznej Inteligencji (AI). Projektor ten mógłby być zsynchronizowany z muzyką i efektami świetlnymi, tworząc spójną i immersyjną
+                                atmosferę. Wyświetlane treści mogłyby być dostosowane do charakteru utworów muzycznych, a także do tematyki koncertu, co pozwoliłoby
+                                na stworzenie unikalnego doświadczenia dla publiczności.
+                            </li>
+
+                            <li>
+                                <b>Kontrolera efektów wizualnych</b> - np. <i>Dymiarki</i>, efektów pirotechnicznych czy innych, które pozwoliłyby na
+                                dodanie jeszcze większej liczby elementów wizualnych do koncertu, synchronizując je z muzyką i innymi efektami.
+                            </li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="swot-analysis">Analiza SWOT</h3>
+
+                    <p>
+                        Poniżej (tabela 1.) przedstawiona jest analiza SWOT dotycząca organizacji szczegółowo opisanego powyżej
+                        Multimedialnego Koncertu Muzyki Filmowej.
+                    </p>
+
+                    <p>
+                        <table class="swot-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Tabela 1. Analiza SWOT - Multimedialny Koncert Muzyki Filmowej</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th>Strengths (Mocne strony)</th>
+                                    <th>Weaknesses (Słabe strony)</th>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Oryginalna i wyróżniająca się forma koncertu: organy + muzyka filmowa + multimedia.</li>
+                                            <li>Duży potencjał "efektu wow" dzięki multimedialności wydarzenia.</li>
+                                            <li>Wykorzystanie organów cyfrowych własnego autorstwa daje elastyczność technologiczną i twórczą.</li>
+                                            <li>Możliwość integracji wielu urządzeń przez MIDI.</li>
+                                            <li>Hauptwerk umożliwia dostęp do brzmień wielu organów piszczałkowych z całego świata.</li>
+                                            <li>Możliwość dostosowania brzmienia i instrumentarium do charakteru konkretnych utworów filmowych.</li>
+                                            <li>Forma atrakcyjna promocyjnie (łatwe tworzenie materiałów różnego typu - audio, video - do social mediów).</li>
+                                        </ul>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+                                            <li>Złożona logistyka i konieczność przygotowania wielu elementów (audio, światło, projekcja, efekty).</li>
+                                            <li>Ryzyko problemów technicznych (komputer, sterowniki, synchronizacja, opóźnienia, awarie sprzętu).</li>
+                                            <li>Wysokie koszty produkcji: projektor, oświetlenie, kontrolery, ewentualne efekty specjalne.</li>
+                                            <li>Duże wymagania czasowe związane z przygotowaniem programu i próbami technicznymi.</li>
+                                            <li>Trudność w znalezieniu odpowiedniej sali z warunkami do koncertu multimedialnego.</li>
+                                            <li>Odbiorcy mogą oczekiwać np. klasycznej orkiestry albo nawet fortepianu, a solo organów.</li>
+                                            <li>Wymaga sprawnego zespołu technicznego oraz dodatkowych osób do obsługi wydarzenia.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>Opportunities (Szanse)</th>
+                                    <th>Threats (Zagrożenia)</th>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <ul>
+                                            <li>Rosnąca popularność koncertów muzyki filmowej i wydarzeń łączących klasykę z popkulturą.</li>
+                                            <li>Możliwość współpracy z wieloma typami instytucji kultury: kinami, festiwalami filmowymi, domami kultury itd..</li>
+                                            <li>Potencjał na pozyskanie sponsorów dzięki atrakcyjności wizualnej i medialnej projektu.</li>
+                                            <li>Możliwość uzyskania dofinansowań i grantów na różne zasoby.</li>
+                                            <li>Możliwość stworzenia cyklu wydarzeń (np. edycje tematyczne).</li>
+                                            <li>Możliwość rozbudowy o element edukacyjny (np. prelekcja o muzyce filmowej i technologii MIDI).</li>
+                                            <li>Możliwość dotarcia do młodszej publiczności dzięki formie multimedialnej.</li>
+                                        </ul>
+                                    </td>
+
+                                    <td>
+                                        <ul>
+                                            <li>Konkurencja ze strony dużych koncertów muzyki filmowej (np. z orkiestrą symfoniczną).</li>
+                                            <li>Ryzyko prawne związane z prawami autorskimi (np. wykorzystanie materiałów filmowych w projekcji).</li>
+                                            <li>Ryzyko, że koszty wydarzenia przewyższą wpływy z biletów.</li>
+                                            <li>Nieprzewidziane problemy techniczne podczas koncertu mogą obniżyć odbiór artystyczny.</li>
+                                            <li>Ograniczenia lokalowe (np. brak możliwości zaciemnienia sali lub brak miejsca na projektor).</li>
+                                            <li>Ryzyko słabej frekwencji przy niewystarczającej promocji lub źle dobranej grupie docelowej.</li>
+                                            <li>Ograniczenia organizacyjne i terminowe związane z dostępnością obiektu i sprzętu.</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </p>
+
+                </section>
+
+                <section>
+                    <h3 class="section-title" id="summary">Podsumowanie</h3>
+                        
+                    <p>
+                        Zaprezentowana została analiza SWOT dotycząca organizacji Multimedialnego Koncertu Muzyki Filmowej,
+                        która pozwoliła zidentyfikować kluczowe mocne i słabe strony tego przedsięwzięcia, a także szanse i zagrożenia,
+                        które mogą wpłynąć na jego sukces. Analiza ta stanowi cenne narzędzie strategiczne, które może pomóc w skutecznym
+                        planowaniu i podejmowaniu decyzji dotyczących organizacji koncertu, a także w identyfikacji obszarów wymagających
+                        poprawy oraz potencjalnych możliwości rozwoju.
+                    </p>
+
+                    <p>
+                        Kluczowe mocne strony koncertu to jego oryginalna i wyróżniająca się forma, duży potencjał "efektu wow" dzięki multimedialności,
+                        wykorzystanie organów cyfrowych własnego autorstwa oraz możliwość integracji wielu urządzeń przez MIDI. Z drugiej strony, słabe strony
+                        obejmują złożoną logistykę, ryzyko problemów technicznych, wysokie koszty produkcji, duże wymagania czasowe oraz trudność w znalezieniu odpowiedniej
+                        sali. Szanse związane z organizacją koncertu to rosnąca popularność tego typu wydarzeń, możliwość współpracy z różnymi instytucjami kultury,
+                        potencjał na pozyskanie sponsorów i dofinansowań, a także możliwość dotarcia do młodszej publiczności. Zagrożenia natomiast obejmują konkurencję ze strony
+                        dużych koncertów muzyki filmowej, ryzyko prawne związane z prawami autorskimi, ryzyko finansowe oraz nieprzewidziane problemy techniczne.
+                    </p>
+                </section>
+
+                <hr class="line">
+
+                <section>
+                    <h3 class="section-title" id="sources">Źródła</h3>
+
+                    <p>
+                        Podczas pisania korzystałem z następujących źródeł:
+
+                        <ul class="reset-list">
+                            <li><sup>1</sup><a href="https://en.wikipedia.org/wiki/MIDI" target="_blank" id="source-1"> Hauptwerk.com (strona główna)</a></li>
+                            <li><sup>2</sup><a href="https://hauptwerk.com/" target="_blank" id="source-2"> Protokół MIDI (wikipedia)</a></li>                            
+                        </ul>    
+                    </p>           
+                </section>
+            </article>
+
+            <hr class="line">
+
+            <footer class="footer p-3">
+                <div>
+                    &copy; <i>Przemysław Kojs 06.02.2026 r.</i>
+                </div>
+                <br/>
+                <div>
+                    Praca została napisana na potrzeby przedmiotu <i>Promocja i Marketing Dóbr Kultury</i>, prowadzonego przez
+                    <a href="https://amuz.wroc.pl/mgr-joanna-polak-11034" target="_blank">mgr Joannę Polak</a>.
+                    Termin oddania: <a href="https://www.kalbi.pl/8-lutego" target="_blank"><u>08.02.2026 r.</u></a>
+                </div>
+            </footer>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
