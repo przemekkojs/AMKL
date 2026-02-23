@@ -1,4 +1,5 @@
 // This script contains the main logic of the program
+const filename = "fakultety2025_2026_lato.tsv";
 
 class row {
     constructor(course_name, suggested_learning_stage, teacher, place_limit, course_type, test_type, hours_winter, hours_summer, ects_winter, ects_summer, ects_combined, faculty, faculty_name, weekday, start_hour, end_hour, room, additional_pass_info, additional_info, semester="") {
@@ -217,7 +218,7 @@ async function readAllRows() {
         //     window.location.replace(newPath);
         // }
 
-        const res = await fetch(`js/resources/fakultety2025_2026.tsv`);
+        const res = await fetch(`js/resources/${filename}.tsv`);
         //const res = await fetch(`js/resources/${filename}`);
         const text = await res.text();
 
