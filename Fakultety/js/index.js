@@ -1,5 +1,5 @@
 // This script contains the main logic of the program
-const filename = "fakultety2025_2026_lato.tsv";
+const filename = "fakultety2025_2026_lato";
 
 class row {
     constructor(course_name, suggested_learning_stage, teacher, place_limit, course_type, test_type, hours_winter, hours_summer, ects_winter, ects_summer, ects_combined, faculty, faculty_name, weekday, start_hour, end_hour, room, additional_pass_info, additional_info, semester="") {
