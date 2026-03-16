@@ -1,5 +1,5 @@
 // This script contains the main logic of the program
-const filename = "fakultety2025_2026_lato";
+const filename = "fakultety2025_2026_lato.tsv";
 
 class row {
     constructor(course_name, suggested_learning_stage, teacher, place_limit, course_type, test_type, hours_winter, hours_summer, ects_winter, ects_summer, ects_combined, faculty, faculty_name, weekday, start_hour, end_hour, room, additional_pass_info, additional_info, semester="") {
@@ -51,20 +51,6 @@ class row {
 }
 
 function readOneRow(content) {
-    try {
-        return readOneRowNew(content);
-    }
-    catch (err) {
-        try {
-            return readOneRowOld(content);
-        }
-        catch (err) {
-            console.error(err);
-        }
-    }
-}
-
-function readOneRowNew(content) {
     const splittedContent = content.split('\t');
     const contentLength = splittedContent.length;
 
@@ -97,129 +83,11 @@ function readOneRowNew(content) {
     );
 }
 
-function readOneRowOld(content) {
-    let splittedContent = content.split(';');
-        
-    if (splittedContent.length < 14) {
-        throw new Error(`Error parsing row ${content}`);
-    }
-
-    let clusteredInfo = splittedContent[13];
-    
-    let addInfo = "";
-    let addPassInfo = "";
-    let startHour = "";
-    let endHour = "";
-    let room = "";
-    let weekday = "";
-    let result;
-
-    if (splittedContent.length == 15) {
-        addInfo = splittedContent[14];
-    }
-    else {
-        addInfo = "";
-    }
-
-    if (clusteredInfo.length > 0) {
-        clusteredInfoSplitted = clusteredInfo.split(',');
-
-        if (clusteredInfoSplitted.length < 3) {
-            addPassInfo = clusteredInfo;
-        }
-        else {
-            weekday = clusteredInfoSplitted[0];
-            let time = clusteredInfoSplitted[1].split('-');
-            room = clusteredInfoSplitted[2];
-
-            if (time.length != 2) {
-                startHour = "?????";
-                endHour = "?????";
-            }
-            else {
-                startHour = time[0].replace(".", ":");
-                endHour = time[1].replace(".", ":");
-            }
-
-            if (clusteredInfoSplitted.length == 3) {
-                addPassInfo = "";
-            }
-            else if (clusteredInfoSplitted.length == 4) {
-                addPassInfo = clusteredInfoSplitted[3];
-                room = clusteredInfoSplitted[2];
-            }
-            else {
-                addPassInfo = "";
-
-                clusteredInfoSplitted.forEach(item => {
-                    addPassInfo += item.trim() + " ";
-                });
-            }           
-        }
-
-        result = new row(
-            splittedContent[0],
-            splittedContent[1],
-            splittedContent[2],
-            splittedContent[3],
-            splittedContent[4],
-            splittedContent[5],
-            splittedContent[6],
-            splittedContent[7],
-            splittedContent[8],
-            splittedContent[9],
-            splittedContent[10],
-            splittedContent[11],
-            splittedContent[12],
-            weekday,
-            startHour,
-            endHour,
-            room,
-            addPassInfo,
-            addInfo
-        )
-    }
-    else {
-        result = new row(
-            splittedContent[0],
-            splittedContent[1],
-            splittedContent[2],
-            splittedContent[3],
-            splittedContent[4],
-            splittedContent[5],
-            splittedContent[6],
-            splittedContent[7],
-            splittedContent[8],
-            splittedContent[9],
-            splittedContent[10],
-            splittedContent[11],
-            splittedContent[12],
-            weekday,
-            startHour,
-            endHour,
-            room,
-            "",
-            addInfo
-        )
-    }
-    
-    return result;
-}
-
 async function readAllRows() {
     const result = [];
 
     try {
-        const filename = localStorage.getItem('filename');
-
-        // if (!filename || filename === "") {
-        //     const currentPath = window.location.pathname;
-        //     const newPath = currentPath.replace("index.html", "loadDb.html");
-        //     window.location.replace(newPath);
-        // }
-
-        const res = await fetch(`js/resources/${filename}.tsv`);
-        //const res = await fetch(`js/resources/${filename}`);
+        const res = await fetch(`js/resources/${filename}`);
         const text = await res.text();
 
         const lines = text.split(/\r\n|\n/);
